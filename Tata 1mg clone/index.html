@@ -1,0 +1,2960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    #cart {
+  transform: scaleX(-1);
+
+  display: inline-block; /* Adjust this based on your layout */}
+  
+  /* Style the optgroup element */
+ .content{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    
+
+ }
+ .slider{
+    width: 960px;
+    height: 200px;
+    overflow: hidden;
+ }
+ .slides{
+    width: 1000%;
+    height: 200px;
+    display: flex;
+    
+ }
+
+ .slide{
+    width: 20%;
+    transition: 1s;
+ }
+  .slides input{
+    display: none;
+  }
+
+  .slide img{
+    width: 960px;
+    height: 200px;
+
+  }
+  .navigation-manual{
+    position: absolute;
+    width: 960px;
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+    
+    
+    
+  }
+  .manual-btn{
+    background-color:black;
+    border: 2px solid black;
+    opacity: 0%;
+    padding: 3px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+    
+    
+  }
+.manual-btn:not(:last-child){
+    margin-right: 20px;
+
+}
+.manual-btn:hover{
+    background: black;
+}
+#radio1:checked ~ .first{
+    margin-left:0;
+}
+#radio2:checked ~ .first{
+    margin-left: -11.5%;
+}
+#radio3:checked ~ .first{
+    margin-left:-25.5%;
+}
+#radio4:checked ~ .first{
+    margin-left:-43%;
+}
+#radio5:checked ~ .first{
+    margin-left:-67%;
+}
+#radio6:checked ~ .first{
+    margin-left:-100%;
+}
+#radio7:checked ~ .first{
+    margin-left:-120%;
+}
+#radio8:checked ~ .first{
+    margin-left:-140%;
+}
+#radio9:checked ~ .first{
+    margin-left:-160%;
+}
+#radio10:checked ~ .first{
+    margin-left:-180%;
+}
+
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 960px;
+    justify-content: center;
+    margin-top: 178px;
+
+}
+.navigation-auto div{
+    border: 2px solid black;
+    opacity: 30%;
+    
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 16px;
+
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: black;
+    opacity: 30%;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: black;
+    opacity: 30%;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: black;
+    opacity: 30%;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: black;
+    opacity: 30%;
+}
+#radio5:checked ~ .navigation-auto .auto-btn5{
+    background: black;
+    opacity: 30%;
+}
+#radio6:checked ~ .navigation-auto .auto-btn6{
+    background: black;
+    opacity: 30%;
+}
+#radio7:checked ~ .navigation-auto .auto-btn7{
+    background: black;
+    opacity: 30%;
+}
+#radio8:checked ~ .navigation-auto .auto-btn8{
+    background: black;
+    opacity: 30%;
+}
+#radio9:checked ~ .navigation-auto .auto-btn9{
+    background: black;
+    opacity: 30%;
+}
+#radio10:checked ~ .navigation-auto .auto-btn10{
+    background: black;
+    opacity: 30%;
+}
+
+.slider-container {
+            display: flex;
+            overflow: hidden;
+            width: 95%;
+            height: 240px;
+            padding-left:2px;
+            margin-left: 60px;
+            scroll-behavior: smooth; /* Optional: Add smooth scrolling effect */
+            
+        }
+
+        .slider-item {
+            flex: 0 0 auto;
+            padding: 0 10px; /* Adjust the spacing between items */
+
+                }
+
+
+        .slider-item:hover{
+            box-shadow: 0 0 14px 0 rgba(0, 0, 0, .24);
+            border-radius: 10px;
+        }  
+
+        #image{
+            width: 180px;
+            height: 180px;
+            padding: 20px;
+            padding-bottom: 15px;
+        }
+
+        #prev, #next {
+            position: absolute;
+            top: 50%;
+            border-radius: 100%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            cursor: pointer;
+            color: #ff6f61;
+            background-color: white;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+
+        #prev {
+            left: 10px;
+            top: 800px;
+            box-shadow: 0 0 7px 0 rgba(0, 0, 0, .24);
+            }
+
+        #next {
+            right: 10px;
+            top: 800px;
+            box-shadow: 0 0 7px 0 rgba(0, 0, 0, .24);
+        }
+
+        #prev:hover, #next:hover {
+            opacity: 1;
+        }
+
+        .slider-container2 {
+            display: flex;
+            overflow: hidden;
+            width: 95%;
+            height: 140px;
+            padding-left: 2px;
+            margin-left: 75px;
+        
+            scroll-behavior: smooth; /* Optional: Add smooth scrolling effect */
+
+            
+        }    
+        .slider-item2 {
+            flex: 0 0 auto;
+            padding: 0 10px; /* Adjust the spacing between items */
+            margin-top: 20px;
+            margin-right: 22px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding-top: 15px;
+        }
+        
+        .slider-item2:hover{
+            box-shadow: 0 0 14px 0 rgba(0, 0, 0, .24);
+            border-radius: 10px;
+        }  
+
+        #customPrev, #customNext {
+      position: absolute;
+      top: 50%;
+      border-radius: 100%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      cursor: pointer;
+      color: #ff6f61;
+      background-color: white;
+      padding: 10px;
+      border: none;
+      outline: none;
+      box-shadow: 0 0 7px 0 rgba(0, 0, 0, .24);
+    }
+
+    #customPrev {
+      left: 10px;
+      top: 1080px;
+    }
+
+    #customNext {
+      right: 10px;
+      top: 1080px;
+    }
+
+    #customPrev:hover, #customNext:hover {
+      opacity: 1;
+    }
+
+
+    .slider-container3 {
+            display: flex;
+            overflow: hidden;
+            width: 95%;
+            height: 210px;
+            padding-left: 2px;
+            margin-left: 75px;
+            scroll-behavior: smooth; /* Optional: Add smooth scrolling effect */
+        }   
+
+        
+        .slider-item3 {
+            flex: 0 0 auto;
+            padding: 0 10px; /* Adjust the spacing between items */
+            width: 175px;
+            height: 210px;
+            padding: 30px
+
+                }
+
+
+        .slider-item3:hover{
+            box-shadow: 0 0 14px 0 rgba(0, 0, 0, .24);
+            border-radius: 10px;
+        } 
+        
+        #customPrev3, #customNext3 {
+      position: absolute;
+      top: 50%;
+      border-radius: 100%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      cursor: pointer;
+      color: #ff6f61;
+      background-color: white;
+      padding: 10px;
+      border: none;
+      outline: none;
+      box-shadow: 0 0 7px 0 rgba(0, 0, 0, .24);
+    }
+
+    #customPrev3 {
+      left: 10px;
+      top: 1330px;
+    }
+
+    #customNext3 {
+      right: 10px;
+      top: 1330px;
+    }
+
+    #customPrev3:hover, #customNext3:hover {
+      opacity: 1;
+    }
+
+
+
+    .slider-container4 {
+            display: flex;
+            overflow: hidden;
+            width: 95%;
+            height: 380px;
+            padding-left:2px;
+            margin-left: 60px;
+            scroll-behavior: smooth; /* Optional: Add smooth scrolling effect */
+            
+        }
+
+        .slider-item4 {
+            flex: 0 0 auto;
+            padding: 0 10px; /* Adjust the spacing between items */
+            width: 165px;
+            height: 380px;
+            flex-direction: column;
+            
+
+                }
+
+
+        .slider-item4:hover{
+            box-shadow: 0 0 14px 0 rgba(0, 0, 0, .24);
+            border-radius: 10px;
+        } 
+            
+
+        #customPrev4, #customNext4 {
+      position: absolute;
+      top: 50%;
+      border-radius: 100%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      cursor: pointer;
+      color: #ff6f61;
+      background-color: white;
+      padding: 10px;
+      border: none;
+      outline: none;
+      box-shadow: 0 0 7px 0 rgba(0, 0, 0, .24);
+    }
+
+    #customPrev4 {
+      left: 10px;
+      top: 1730px;
+    }
+
+    #customNext4 {
+      right: 10px;
+      top: 1730px;
+    }
+
+    #customPrev4:hover, #customNext4:hover {
+      opacity: 1;
+    }
+
+    .slider-container5 {
+            display: flex;
+            overflow: hidden;
+            width: 95%;
+            height: 140px;
+            padding-left: 2px;
+            margin-left: 75px;
+        
+            scroll-behavior: smooth; /* Optional: Add smooth scrolling effect */
+
+            
+        }    
+        .slider-item5 {
+            flex: 0 0 auto;
+            padding: 0 10px; /* Adjust the spacing between items */
+            margin-top: 20px;
+            margin-right: 22px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding-top: 15px;
+        }
+        
+        .slider-item5:hover{
+            box-shadow: 0 0 14px 0 rgba(0, 0, 0, .24);
+            border-radius: 10px;
+        }  
+
+        
+        #customPrev5, #customNext5 {
+      position: absolute;
+      top: 50%;
+      border-radius: 100%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      cursor: pointer;
+      color: #ff6f61;
+      background-color: white;
+      padding: 10px;
+      border: none;
+      outline: none;
+      box-shadow: 0 0 7px 0 rgba(0, 0, 0, .24);
+    }
+
+    #customPrev5 {
+      left: 10px;
+      top: 2090px;
+    }
+
+    #customNext5 {
+      right: 10px;
+      top: 2090px;
+    }
+
+    #customPrev5:hover, #customNext5:hover {
+      opacity: 1;
+    }
+
+    .slider-container6 {
+            display: flex;
+            overflow: hidden;
+            width: 95%;
+            height: 210px;
+            padding-left: 2px;
+            margin-left: 75px;
+            scroll-behavior: smooth; /* Optional: Add smooth scrolling effect */
+        }   
+
+        
+        .slider-item6{
+            flex: 0 0 auto;
+            padding: 0 10px; /* Adjust the spacing between items */
+            width: 175px;
+            height: 210px;
+            padding: 30px
+
+                }
+
+
+        .slider-item6:hover{
+            box-shadow: 0 0 14px 0 rgba(0, 0, 0, .24);
+            border-radius: 10px;
+        } 
+        
+        #customPrev6, #customNext6 {
+      position: absolute;
+      top: 50%;
+      border-radius: 100%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      cursor: pointer;
+      color: #ff6f61;
+      background-color: white;
+      padding: 10px;
+      border: none;
+      outline: none;
+      box-shadow: 0 0 7px 0 rgba(0, 0, 0, .24);
+    }
+
+    #customPrev6 {
+      left: 10px;
+      top: 2345px;
+    }
+
+    #customNext6 {
+      right: 10px;
+      top: 2345px;
+    }
+
+    #customPrev6:hover, #customNext6:hover {
+      opacity: 1;
+    }
+
+    /* sign-up page */
+    .popup{
+            position: absolute;
+            top: -150%;
+            left: 50%;
+            opacity: 0;
+            transform: translate(-50%,-50%) scale(1.25);
+            width: 380px;
+            padding: 20px 30px;
+            background: #ffff;
+            box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.28);
+            border-radius: 10px;
+            transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms,transform 20ms ease-in-out 0ms;
+
+
+        }
+        .popup.active{
+            top: 50%;
+            opacity: 1;
+            transform: translate(-50%,-50%) scale(1);
+            transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms,transform 20ms ease-in-out 0ms;
+        }
+        .popup .close-btn{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width:15px;
+            height: 15px;
+            background:#888 ;
+            color: #eee;
+            text-align: center;
+            line-height: 15px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .popup .form h2{
+            text-align: center;
+            color: #222;
+            margin: 10px 0 20px;
+            font-size: 25px;
+        }
+        .popup .form .form-element{
+            margin: 15px 0px;
+        }
+        .popup .form .form-element label{
+            font-size: 14px;
+            color: #222;
+        }
+        .popup .form .form-element input[type="text"],
+        .popup .form .form-element input[type="password"]{
+            margin-top: 5px;
+            display: block;
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+        .popup .form .form-element input[type="checkbox"]{
+            margin-right: 5px;
+        }
+        .popup .form .form-element input[type="submit"]{
+            width: 100%;
+            height: 40px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            background: #222;
+            color: #f5f5f5;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .popup .form .form-element a{
+            display: block;
+            text-align: right;
+            font-size: 15px;
+            color: #1a79ca;
+            text-decoration: none;
+            font-weight: 600;
+        }
+/* sign-uo end */
+            /* sign-up page */
+    .popup2{
+            position: absolute;
+            top: -150%;
+            left: 50%;
+            opacity: 0;
+            transform: translate(-50%,-50%) scale(1.25);
+            width: 380px;
+            padding: 20px 30px;
+            background: #ffff;
+            box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.28);
+            border-radius: 10px;
+            transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms,transform 20ms ease-in-out 0ms;
+
+
+        }
+        .popup2.active{
+            top: 50%;
+            opacity: 1;
+            transform: translate(-50%,-50%) scale(1);
+            transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms,transform 20ms ease-in-out 0ms;
+        }
+        .popup2 .close-btn2{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width:15px;
+            height: 15px;
+            background:#888 ;
+            color: #eee;
+            text-align: center;
+            line-height: 15px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .popup2 .form2 h2{
+            text-align: center;
+            color: #222;
+            margin: 10px 0 20px;
+            font-size: 25px;
+        }
+        .popup2 .form2 .form-element2{
+            margin: 15px 0px;
+        }
+        .popup2 .form2 .form-element2 label{
+            font-size: 14px;
+            color: #222;
+        }
+        .popup2 .form2 .form-element2 input[type="text"],
+        .popup2 .form2 .form-element2 input[type="password"]{
+            margin-top: 5px;
+            display: block;
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+        .popup2 .form2 .form-element2 input[type="checkbox"]{
+            margin-right: 5px;
+        }
+        .popup2 .form2 .form-element2 input[type="submit"]{
+            width: 100%;
+            height: 40px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            background: #222;
+            color: #f5f5f5;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .popup2 .form2 .form-element2 a{
+            display: block;
+            text-align: right;
+            font-size: 15px;
+            color: #1a79ca;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+  </style>
+
+ 
+    
+</head>
+<body>
+<div class=" w-full overflow-x-hidden">  
+    <!-- navbar-1 -->
+    <section class=" w-full relative  border border-[#f1f4f6] flex flex-row justify-between py-2  ">
+        <div class="flex flex-row justify-between w-full items-center ">
+            <div class="flex flex-row gap-5 items-center p-0 mx-8 bg-[#ffff] font-bold ">
+            <a>
+                <img src="https://www.1mg.com/images/tata_1mg_logo.svg" alt="" width="120" height="30">
+            </a>
+
+            <a href="" class="text-[#ff6f61] hover:cursor-pointer">MEDICINES</a>
+            <a href="" class=" hover:text-[#ff6f61] cursor-pointer">
+                LAB TESTS
+                <span class="text-[11px] bg-[#ff6f61] font-bold text-white w-[40px] h-[16px] leading-3 rounded-sm px-[3px] py-[1px] ">SAFE</span>
+            </a>
+
+            <a href="" class=" hover:text-[#ff6f61] cursor-pointer">CONSULT DOCTORS</a>
+            <a href="" class=" hover:text-[#ff6f61] cursor-pointer">CANCER CARE</a>
+            <a href="" class=" hover:text-[#ff6f61] cursor-pointer">AYURVEDA</a>
+            <a href="" class=" hover:text-[#ff6f61] cursor-pointer">CARE PLAN
+                <span class="text-[11px] bg-[#ff6f61] font-bold text-white w-[40px] h-[16px] leading-3 rounded-sm px-[4px] py-[1px] ">SAVE MORE</span>
+                </a>
+            </ul>
+            </div>
+            <div class="flex flex-row gap-2 items-center text-[14px] font-[500] pl-16">
+                <div><p id="show-login" class="hover:cursor-pointer">Login</p></div>
+                <div class="w-[2px] h-4 bg-black opacity-60 hover:cursor-text"></div>
+                <div class="center"><p id="show-sign-up" class="hover:cursor-pointer ">Sign Up</p></div>
+            </div>
+            <div class=" text-[14px] font-[500] mr-6">
+                <p>Offers</p>
+            </div>
+            <div class="hover:cursor-pointer">
+                <img id="cart" src="shopping-cart-svgrepo-com.svg" alt="" width="25" height="20">
+
+
+            </div>
+            <div>
+                <p class="mx-8 text-[14px] font-[500] hover:cursor-pointer">Need Help?</p>
+            </div>
+        </div>
+    </section>
+    <!-- sign-up Page start -->
+ <form id="form">    
+    <div class="popup z-50">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Sign-up
+            </h2>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" name="" id="email" placeholder="Enter Email-id">
+
+            </div>
+            <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" name="" id="password" placeholder="Enter password">
+            </div>
+            <div class="form-element">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">Remember-me</label>
+            </div>
+            <div class="form-element">
+                <input type="submit" name="" id="submit" >
+            </div>
+
+        </div>
+    </div>
+ </form>
+
+    <!-- sign-up end -->
+    <!--login page start  -->
+    <form id="form2">    
+        <div class="popup2 z-50">
+            <div class="close-btn2">&times;</div>
+            <div class="form2">
+                <h2>Login
+                </h2>
+                <div class="form-element2">
+                    <label for="email">Email</label>
+                    <input type="text" name="" id="email2" placeholder="Enter Email-id">
+    
+                </div>
+                <div class="form-element2">
+                    <label for="password">Password</label>
+                    <input type="password" name="" id="password2" placeholder="Enter password">
+                </div>
+                <div class="form-element2">
+                    <input type="checkbox" name="" id="remember-me2">
+                    <label for="remember-me">Remember-me</label>
+                </div>
+                <div class="form-element2">
+                    <input type="submit" name="" id="submit2" >
+                </div>
+                <div class="form-element2">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
+        </div>
+     </form>
+     <!-- login page end -->
+
+    <!-- navbar-2 -->
+    <section>
+        <div class="flex flex-row  justify-around  items-center my-2 ">
+            <div class="flex flex-row">
+            <div class="w-[250px] h-9 flex flex-row justify-between bg-slate-100 ml-6 items-center  ">
+                <i class="fa fa-map-marker  ml-4 opacity-60 hover:cursor-pointer"></i>
+                <p class="font-bold mr-16 hover:cursor-text">New Delhi</p>
+                <img src="focus.png" width="15"  class="mr-3 opacity-50 hover:cursor-pointer">
+       
+                
+            </div>
+            <div class="flex flex-row ">
+                <input type="text" placeholder="Search for Medicines and Health Products" class="w-[520px] ml-1 px-6 h-9 bg-slate-100" >
+                <div class="w-9 h-9 bg-slate-100 hover:cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="20" viewBox="0 0 50 50" opacity="0.5" class="mt-[10px]" >
+                        <path d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"></path>
+                    </svg>
+                </div>
+            </div>
+            </div>
+
+            <div class="flex flex-row item-center justify-between">
+                
+                <img src="https://onemg.gumlet.io/quick_buy_rebrand_lqpnce.svg" alt="">
+               <span class="pt-2 hover:cursor-text">
+                QUICK BUY! Get 15% off on medicines*
+               </span>
+               <button class=" relative rounded-md w-[160px] bg-[#ff6f61] h-10 pl-[4px] pr-[4px] ml-2  text-white text-[18px]  items-center
+               hover:cursor-pointer ">Quick order</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- navbar-3 -->
+    <section class="w-auto border border-[#decade] bg-white  ">
+        
+        <ul class="flex flex-row justify-around text-center box-content ml-14 flex-wrap">
+            <li >
+                <div class="group text-[14px]  p-[8px_4px] m-[0_4px]">
+                    <a href="" class="group-hover:visible hover:text-[#ff6f61]">Health Resource Center</a>
+                    <i class="fa fa-angle-down drop-icon  "></i>
+                    <div id="health" class="pl-4 invisible group-hover:visible absolute z-30 text-left m-0 px-12px w-[300px] border font-bold  bg-white shadow-[0_2px_2px_rgba(0,0,0,0.2)] leading-10 ">
+                        <ul class=" text-[12px]">
+                            <li>
+                                <a href="" class="">All Diseases</a>
+                            </li>
+                            <li>
+                                <a href="">All Medicines</a>
+                            </li>
+                            <li>
+                                <a href="">Medicines by Therapeutic Class</a>
+                            </li>
+                        </ul>
+                    </div>   
+                </div> 
+            </li>
+            <li >
+                <div class="group text-[14px]  p-[8px_4px] m-[0_4px]">
+                    <a href="" class="group-hover:visible hover:text-[#ff6f61]">Vitamins & Nutrition</a>
+                    <i class="fa fa-angle-down drop-icon  "></i>
+                    <div id="health" class="pl-4 invisible group-hover:visible absolute z-30 text-left m-0 px-12px w-auto border font-bold  bg-white shadow-[0_2px_2px_rgba(0,0,0,0.2)] leading-8 ">
+                        <ul class="flex flex-row justify-between space-x-6 text-[12px]">
+                            <li>
+                                <a href="" class="">
+                                    <span class="font-bold">Vitamins & Supplements</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Multivitamins</a>
+                                        <a href="">Vitamin D3</a>
+                                        <a href="">Vitamin C</a>
+                                        <a href="">Minerals</a>
+                                        <a href="">Calcium</a>
+                                        <a href="">Vitamin B12 & B complex</a>
+                                        <a href="">Other Vitamins</a>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <span class="font-bold">Nutritional Drinks</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+
+                                        <a href="">Women Nutrition</a>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="w-[2px] h-[430px] bg-black opacity-20 mt-3"></div>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <span class="font-bold">Nutritional Supplements</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Dr. Morepen</a>
+                                        <a href="">Power Gummies</a>
+                                        <a href="">Tata 1mg</a>
+                                        <a href="">HealthKart</a>
+                                        <a href="">Carbamide Forte</a>
+                                        <a href="">Swisse</a>
+                                        <a href="">Zingavita</a>
+                                    </div>
+                                </a>
+                                <a href="" class="">
+                                    <span class="font-bold">Protein Supplements</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Whey Protein</a>
+                                        <a href="">Amino Acids</a>
+                                        <a href="">Mass Gainers</a>
+                                        <a href="">Workout Essential</a>
+                                        <a href="">Fat Burners</a>
+                                    </div>
+                                </a>        
+                            </li>
+                            <li>
+                                <div class="w-[2px] h-[530px] bg-black opacity-20 mt-3"></div>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <span class="font-bold">Healthy Snacks & Drinks</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Green Tea & Herbal Tea</a>
+                                        <a href="">Energy Foods</a>
+                                        <a href="">Rehydration beverages</a>
+                                        <a href="">Apple Cider Vinegar</a>
+                                        <a href="">Nuts & Cereals</a>
+                                        <a href="">Chyawanprasha</a>
+                                    </div>
+                                </a>  
+                                <a href="" class="">
+                                    <span class="font-bold">Omega & Fish Oil</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Fish Oil</a>
+                                        <a href="">Cod Liver Oil</a>
+                                        <a href="">Flax Seed Oil</a>
+                                    </div>
+                                </a> 
+                                <a href="" class="">
+                                    <span class="font-bold">Speciality Supplements</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Pre and Probiotics</a>
+                                        <a href="">Glucosamine</a>
+                                        <a href="">Collagen</a>
+                                        <a href="">Antioxidants</a>
+                                        <a href="">Biotin</a>
+                                    </div>
+                                </a>   
+
+                            </li>
+                            <li>
+                                <div class="w-[2px] h-[460px] bg-black opacity-20 mt-3"></div>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <span class="font-bold">Supplements by category</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Kid</a>
+                                        <a href="">Adult 50+</a>
+                                        <a href="">Vegetarian</a>
+                                        <a href="">Sports</a>
+                                        <a href="">Women</a>
+                                        <a href="">Men</a>
+                                    </div>
+                                </a>  
+                                <a href="" class="">
+                                    <span class="font-bold">Supplements by concern</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Weight Management</a>
+                                        <a href="">Daily Weliness</a>
+                                        <a href="">Energy</a>
+                                        <a href="">Immunity Boosters</a>
+                                        <a href="">Hair,skin & nails</a>
+                                        <a href="">Sleep</a>
+                                        <a href="">Bone & Joint</a>
+                                    </div>
+                                </a>        
+                            </li>
+
+                        </ul>
+                    </div>   
+                </div> 
+            </li>
+            <li >
+                <div class="group text-[14px]  p-[8px_4px] m-[0_4px]">
+                    <a href="" class="group-hover:visible hover:text-[#ff6f61]">Diabetes</a>
+                    <i class="fa fa-angle-down drop-icon  "></i>
+                    <div id="health" class="pl-4 invisible group-hover:visible absolute z-30 text-left m-0 px-12px w-[300px] border font-bold  bg-white shadow-[0_2px_2px_rgba(0,0,0,0.2)] leading-10 ">
+                        <ul class=" text-[12px]">
+                            <li>
+                                <a href="" class="">Diabetes Monitoring Devices</a>
+                            </li>
+                            <li>
+                                <a href="">Sugar Free</a>
+                            </li>
+                            <li>
+                                <a href="" class="">Diabetic Medicines</a>
+                                <div class="flex flex-col opacity-50 text-[14px] font-normal leading-8">
+                                    <a href="">Vitamins, Minerals & Antioxidants</a>
+                                    <a href="">Homeopathy Medicines</a>
+                                </div>    
+                            </li>
+                            <li>
+                                <a href="">Sugar Substitutes</a>
+                            </li>
+                            <li>
+                                <a href="">Diabetic Diet</a>
+                                <div class="flex flex-col opacity-50 text-[14px] font-normal leading-8">
+                                    <a href="">Juices & Vinegars</a>
+                                    <a href="">Diabetic Nutrition Supplements</a>
+                            </li>
+                            
+                        </ul>
+                    </div>   
+                </div> 
+            </li>
+            <li>
+                <div class="group text-[14px]  p-[8px_4px] m-[0_4px]">
+                    <a href="" class="group-hover:visible hover:text-[#ff6f61]">Healthcare Devices</a>
+                    <i class="fa fa-angle-down drop-icon  "></i>
+                    <div id="health" class="pl-4 invisible group-hover:visible absolute z-30 text-left m-0 px-12px w-auto border font-bold  bg-white shadow-[0_2px_2px_rgba(0,0,0,0.2)] leading-10 ">
+                        <ul class="flex flex-row space-x-4  text-[12px]">
+                            <li>
+                                <a href="" class="">Top Selling Categories</a>
+                                <div class="flex flex-col opacity-50 text-[14px] font-normal leading-8">
+                                    <a href="">BP Monitors</a>
+                                    <a href="">Nebulizers & Vaporizers</a>
+                                    <a href="">Smart Wearables</a>
+                                    <a href="">Weighing Scales</a>
+                                    <a href="">Thermometers</a>
+                                    <a href="">Respiratory & Surgical Mask</a>
+                                    <a href="">Pulse oximeter</a>
+                                    <a href="">Stethoscopes</a>
+                                </div>   
+                                <a href="">Diabetes Devices</a>
+                                <div class="flex flex-col opacity-50 text-[14px] font-normal leading-8">
+                                    <a href="">Blood Glucose Monitors</a>
+                                    <a href="">Test Strips & Lancets</a>
+                                    <a href="">Syringes & Pens</a>
+                                    <a href="">Continuous glucose monitors </a>
+                                    <a href="">Insulin Coolers</a>
+                                    <a href="">Diabetic Footwear</a>
+                                </div>   
+                            </li>
+                            <li>
+                                <div class="w-[2px] h-[580px] bg-black opacity-20 mt-3"></div>
+                            </li>
+                            <li>
+                                <a href="">Pain Management</a>
+                                <div class="flex flex-col opacity-50 text-[14px] font-normal leading-8">
+                                    <a href="">Electronic heating pads</a>
+                                    <a href="">Hot Water Bottles</a>
+                                    <a href="">Hot & Cold packs</a>
+                                    <a href="">Body Massager </a>
+
+                                </div> 
+                                <a href="">Wound Care & Dressings</a>
+                                <div class="flex flex-col opacity-50 text-[14px] font-normal leading-8">
+                                    <a href="">adhesive bandage</a>
+                                    <a href="">Crepe Bandage</a>
+                                    <a href="">Surgical tapes</a>
+
+                                </div>   
+                                <a href="">Supports, Splints & Braces</a>
+                                <div class="flex flex-col opacity-50 text-[14px] font-normal leading-8">
+                                    <a href="">Knee Support</a>
+                                    <a href="">Back & Abdomen Support</a>
+                                    <a href="">Arm & Elbow Support</a>
+                                    <a href="">Ankle, Foot & Leg Support </a>
+                                    <a href="">Hand & Wrist Braces</a>
+                                    <a href="">Neck & Shoulder Support</a>
+                                    <a href="">Cervical Pillows & Mattress</a>
+                                    <a href="">Compression support & socks</a>
+
+
+                                </div> 
+                                
+                            </li>
+                            <li>
+                                <div class="w-[2px] h-[485px] bg-black opacity-20 mt-3"></div>
+                            </li>
+                            <li>
+                                <a href="">Surgicals</a>
+                                <div class="flex flex-col opacity-50 text-[14px] font-normal leading-8">
+                                    <a href="">Needles & Syringes</a>
+                                    <a href="">Gloves</a>
+                                    <a href="">Catheter</a>
+                                    <a href="">Cannula</a>
+                                    <a href="">Swab</a>
+
+                                </div>   
+                                <a href="">Mobility Aids</a>
+                                <div class="flex flex-col opacity-50 text-[14px] font-normal leading-8">
+                                    <a href="">Walking Sticks</a>
+                                    <a href="">Walkers & Rollators</a>
+                                    <a href="">Wheelchair</a>
+
+                                </div>
+                                <a href="">Daily Living Aids</a>
+                                <div class="flex flex-col opacity-50 text-[14px] font-normal leading-8">
+                                    <a href="">Hearing Aid</a>
+                                    <a href="">Commode Chair</a>
+                                    <a href="">Bed Pan and Urinal Post</a>
+                                    <a href="">Pill Box Organizer</a>
+
+                                </div>      
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>            
+            </li>
+            <li >
+                <div class="group text-[14px]  p-[8px_4px] m-[0_4px]">
+                    <a href="" class="group-hover:visible hover:text-[#ff6f61]">Vitamins & Nutrition</a>
+                    <i class="fa fa-angle-down drop-icon  "></i>
+                    <div id="health" class="pl-4 invisible group-hover:visible absolute z-30 text-left m-0 px-12px w-auto border font-bold  bg-white shadow-[0_2px_2px_rgba(0,0,0,0.2)] leading-8 ">
+                        <ul class="flex flex-row justify-between space-x-6 text-[12px]">
+                            <li>
+                                <a href="" class="">
+                                    <span class="font-bold">Vitamins & Supplements</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Multivitamins</a>
+                                        <a href="">Vitamin D3</a>
+                                        <a href="">Vitamin C</a>
+                                        <a href="">Minerals</a>
+                                        <a href="">Calcium</a>
+                                        <a href="">Vitamin B12 & B complex</a>
+                                        <a href="">Other Vitamins</a>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <span class="font-bold">Nutritional Drinks</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+
+                                        <a href="">Women Nutrition</a>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="w-[2px] h-[430px] bg-black opacity-20 mt-3"></div>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <span class="font-bold">Nutritional Supplements</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Dr. Morepen</a>
+                                        <a href="">Power Gummies</a>
+                                        <a href="">Tata 1mg</a>
+                                        <a href="">HealthKart</a>
+                                        <a href="">Carbamide Forte</a>
+                                        <a href="">Swisse</a>
+                                        <a href="">Zingavita</a>
+                                    </div>
+                                </a>
+                                <a href="" class="">
+                                    <span class="font-bold">Protein Supplements</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Whey Protein</a>
+                                        <a href="">Amino Acids</a>
+                                        <a href="">Mass Gainers</a>
+                                        <a href="">Workout Essential</a>
+                                        <a href="">Fat Burners</a>
+                                    </div>
+                                </a>        
+                            </li>
+                            <li>
+                                <div class="w-[2px] h-[530px] bg-black opacity-20 mt-3"></div>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <span class="font-bold">Healthy Snacks & Drinks</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Green Tea & Herbal Tea</a>
+                                        <a href="">Energy Foods</a>
+                                        <a href="">Rehydration beverages</a>
+                                        <a href="">Apple Cider Vinegar</a>
+                                        <a href="">Nuts & Cereals</a>
+                                        <a href="">Chyawanprasha</a>
+                                    </div>
+                                </a>  
+                                <a href="" class="">
+                                    <span class="font-bold">Omega & Fish Oil</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Fish Oil</a>
+                                        <a href="">Cod Liver Oil</a>
+                                        <a href="">Flax Seed Oil</a>
+                                    </div>
+                                </a> 
+                                <a href="" class="">
+                                    <span class="font-bold">Speciality Supplements</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Pre and Probiotics</a>
+                                        <a href="">Glucosamine</a>
+                                        <a href="">Collagen</a>
+                                        <a href="">Antioxidants</a>
+                                        <a href="">Biotin</a>
+                                    </div>
+                                </a>   
+
+                            </li>
+                            <li>
+                                <div class="w-[2px] h-[460px] bg-black opacity-20 mt-3"></div>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <span class="font-bold">Supplements by category</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Kid</a>
+                                        <a href="">Adult 50+</a>
+                                        <a href="">Vegetarian</a>
+                                        <a href="">Sports</a>
+                                        <a href="">Women</a>
+                                        <a href="">Men</a>
+                                    </div>
+                                </a>  
+                                <a href="" class="">
+                                    <span class="font-bold">Supplements by concern</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Weight Management</a>
+                                        <a href="">Daily Weliness</a>
+                                        <a href="">Energy</a>
+                                        <a href="">Immunity Boosters</a>
+                                        <a href="">Hair,skin & nails</a>
+                                        <a href="">Sleep</a>
+                                        <a href="">Bone & Joint</a>
+                                    </div>
+                                </a>        
+                            </li>
+
+                        </ul>
+                    </div>   
+                </div> 
+            </li>
+            <li >
+                <div class="group text-[14px]  p-[8px_4px] m-[0_4px]">
+                    <a href="" class="group-hover:visible hover:text-[#ff6f61]">Personal Care</a>
+                    <i class="fa fa-angle-down drop-icon  "></i>
+                    <div id="health" class="pl-4 invisible group-hover:visible absolute z-30 text-left m-0 px-12px w-auto border font-bold  bg-white shadow-[0_2px_2px_rgba(0,0,0,0.2)] leading-8 ">
+                        <ul class="flex flex-row justify-between space-x-6 text-[12px]">
+                            <li>
+                                <a href="" class="">
+                                    <span class="font-bold">Sexual Wellness</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Condoms</a>
+                                        <a href="">Lubricants & Massage Gels </a>
+                                        <a href="">Personal body massager</a>
+                                        <a href="">Men Performance Enhancers</a>
+                                        <a href="">Sexual Health Supplements</a>
+
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <span class="font-bold">Skin Care</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+
+                                        <a href="">Body Lotions</a>
+                                        <a href="">Mosquito Repellents</a>
+                                        <a href="">Lip Balm</a>
+                                        <a href="">Acne Care</a>
+                                        <a href="">Bath Essentials</a>
+                                        <a href="">Fashwash</a>
+                                        <a href="">Sanitizers & Handwash</a>
+                                        <a href="">Sunscreen</a>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="w-[2px] h-[430px] bg-black opacity-20 mt-3"></div>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <span class="font-bold">Baby Care</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Baby & Infant Food</a>
+                                        <a href="">Baby Diapers, wipes & more </a>
+                                        <a href="">Nursing & Feeding</a>
+                                        <a href="">Baby bath Essentials </a>
+                                        <a href="">Baby Skin Care</a>
+                                        <a href="">Baby Healthcare</a>
+                                        <a href="">Baby Oral Health</a>
+                                    </div>
+                                </a>
+                                <a href="" class="">
+                                    <span class="font-bold">Hair Care</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Shampoo</a>
+                                        <a href="">Hair Conditioners</a>
+                                        <a href="">Hair Growth Supplements</a>
+                                        <a href="">Hair Oils</a>
+                                        <a href="">Hair Oil Products</a>
+                                    </div>
+                                </a>        
+                            </li>
+                            <li>
+                                <div class="w-[2px] h-[530px] bg-black opacity-20 mt-3"></div>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <span class="font-bold">Elderly Care</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Adult Diapers</a>
+                                        <a href="">Bone & Joint Health </a>
+                                        <a href="">Orthopaedic Supports</a>
+
+                                    </div>
+                                </a>  
+                                <a href="" class="">
+                                    <span class="font-bold">Women Care</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Feminine Hygiene</a>
+                                        <a href="">Women Care Supplements</a>
+                                        <a href="">Mother Care</a>
+                                        <a href="">Menopause</a>
+                                        <a href="">Polycystic Ovary Syndrome</a>
+                                    </div>
+                                </a> 
+                                <a href="" class="">
+                                    <span class="font-bold">Men Care</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Men Grooming</a>
+
+                                    </div>
+                                </a>   
+
+                            </li>
+                            <li>
+                                <div class="w-[2px] h-[460px] bg-black opacity-20 mt-3"></div>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <span class="font-bold">Oral Care</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Toothbrush</a>
+                                        <a href="">Toothpaste</a>
+                                        <a href="">Mouthwash</a>
+                                        <a href="">Oral Care Supplements</a>
+                                        <a href="">Dental Floss & Tongue Cleaner</a>
+                                        <a href="">Tooth Powder</a>
+                                    </div>
+                                </a>  
+                                <a href="" class="">
+                                    <span class="font-bold">Pet care</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Pet Grooming</a>
+                                        <a href="">Pet Food</a>
+                                        <a href="">Pet Health Care</a>
+
+                                    </div>
+                                </a>        
+                            </li>
+
+                        </ul>
+                    </div>   
+                </div> 
+            </li>
+            <li >
+                <div class="group text-[14px]  p-[8px_4px] m-[0_4px]">
+                    <a href="" class="group-hover:visible hover:text-[#ff6f61]">Health Conditions</a>
+                    <i class="fa fa-angle-down drop-icon  "></i>
+                    <div id="health" class="pl-4 invisible group-hover:visible absolute z-30 left-[750px] text-left m-0 px-12px w-auto border font-bold  bg-white shadow-[0_2px_2px_rgba(0,0,0,0.2)] leading-8 ">
+                        <ul class="flex flex-row justify-between space-x-6 text-[12px]">
+                            <li>
+                                <a href="" class="">
+                                    <span class="font-bold">Stomach Care</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Constipation</a>
+                                        <a href="">General Digestion/Indigestion</a>
+                                        <a href="">Loose motion/Diarrhoea</a>
+
+                                    </div>
+                                </a>
+
+                                <a href="">
+                                    <span class="font-bold">Health Care</span>
+
+                                </a>
+
+                                <a href="">
+                                    <span class="font-bold">Bone, Joint & Muscle Care</span>
+                                </a>
+
+                                <a href="">
+                                    <span class="font-bold">Pain Relief</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Omnigel products</a>
+                                        <a href="">Volini</a>
+                                        <a href="">Iodex</a>
+                                        <a href="">Moov</a>
+
+                                    </div>
+
+                                </a>
+                                <a href="">
+                                    <span class="font-bold">Eye Care</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Eye Lubricants</a>
+                                    </div>    
+
+                                </a>
+
+                            </li>
+                            <li>
+                                <div class="w-[2px] h-[430px] bg-black opacity-20 mt-3"></div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="font-bold">Ear Care</span>
+                                </a>
+                                <a href="">
+                                    <span class="font-bold">First Aid</span>
+                                </a>
+                                <a href="">Liver Care</a>
+
+                                <a href="" class="">
+                                    <span class="font-bold">Cold & Cough</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Nasal Sprays</a>
+                                        <a href="">Chest Rubs & Balms</a>
+                                        <a href="">Cough Syrups</a>
+                                        <a href="">Lozenges</a>
+
+                                    </div>
+                                </a>
+                                <a href="" class="">
+                                    <span class="font-bold">Fever & Headache</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Crocin</a>
+                                        <a href="">Calpol</a>
+                                        <a href="">Saridon</a>
+
+                                    </div>
+                                </a> 
+                                <a href="">
+                                    <span class="font-bold">Mental Wellness</span>
+                                </a>       
+                            </li>
+                            <li>
+                                <div class="w-[2px] h-[530px] bg-black opacity-20 mt-3"></div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="font-bold">Kidney Care</span>
+                                </a>
+                                <a href="">
+                                    <span class="font-bold">Respiratory Care</span>
+                                </a>
+                                <a href="">
+                                    <span class="font-bold">Piles,Fissures & Fistula</span>
+                                </a>
+                                <a href="" class="">
+                                    <span class="font-bold">Smoking Cessation</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Zbaconil</a>
+                                        <a href="">Ryze</a>
+                                        <a href="">Nicotex</a>
+                                        <a href="">Nixit</a>
+                                    </div>
+                                </a>  
+                                <a href="" class="">
+                                    <span class="font-bold">Omega & Fish Oil</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Fish Oil</a>
+                                        <a href="">Cod Liver Oil</a>
+                                        <a href="">Flax Seed Oil</a>
+                                    </div>
+                                </a> 
+                                <a href="" class="">
+                                    <span class="font-bold">Derma Care</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Antifungal Creams and Powders</a>
+                                        <a href="">Dry & Itchy Skin</a>
+                                        <a href="">Wounds & Insect Bite </a>
+                                        <a href="">Acne & Pimples</a>
+                                        <a href="">Skin Infection & psoriasis</a>
+                                    </div>
+                                </a>   
+
+                            </li>
+                        </ul>
+                    </div>   
+                </div> 
+            </li>
+            <li >
+                <div class="group text-[14px]  p-[8px_4px] m-[0_4px]">
+                    <a href="" class="group-hover:visible hover:text-[#ff6f61]">Ayurveda Products</a>
+                    <i class="fa fa-angle-down drop-icon  "></i>
+                    <div id="health" class="pl-4 invisible group-hover:visible absolute z-30 text-left left-[750px] m-0 px-12px w-auto border font-bold  bg-white shadow-[0_2px_2px_rgba(0,0,0,0.2)] leading-8 ">
+                        <ul class="flex flex-row justify-between space-x-6 text-[12px]">
+                            <li>
+                                <a href="" class="">
+                                    <span class="font-bold">Popular Categories</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Herbal juices</a>
+                                        <a href="">Chyawanparash</a>
+                                        <a href="">Ayurvedic Immunity Boosters</a>
+                                        <a href="">Unani Medicines</a>
+                                        <a href="">Herbal Supplements
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <span class="font-bold">ayurveda Personal Care</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+
+                                        <a href="">Ayurveda Oral care</a>
+                                        <a href="">Ayurveda Baby care</a>
+                                        <a href="">Ayurveda Skin care</a>
+                                        <a href="">Ayurveda Hair care</a>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="w-[2px] h-[430px] bg-black opacity-20 mt-3"></div>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <span class="font-bold">Best Selling Brands</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Dabur</a>
+                                        <a href="">Baidyanath</a>
+                                        <a href="">Dhootapapeshwar</a>
+                                        <a href="">Aimil</a>
+                                        <a href="">Zandu</a>
+                                        <a href="">Kapiva Ayurveda</a>
+                                        <a href="">Patanjali</a>
+                                        <a href="">Himalaya</a>
+                                    </div>
+                                </a>
+                                <a href="" class="">
+                                    <span class="font-bold">Top Selling Herbs</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Ashwagandha</a>
+                                        <a href="">Alovera</a>
+                                        <a href="">Giloy</a>
+                                        <a href="">Shilajit</a>
+                                        <a href="">Brahmi</a>
+                                    </div>
+                                </a>        
+                            </li>
+                            <li>
+                                <div class="w-[2px] h-[530px] bg-black opacity-20 mt-3"></div>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <span class="font-bold">Top health Concerns</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Cough,Cold,Fever</a>
+                                        <a href="">Sexual Wellness</a>
+                                        <a href="">Bone,Joints and Muscle care</a>
+                                        <a href="">Ayurvedic Stomach care</a>
+                                        <a href="">Diabetic Care</a>
+                                        <a href="">Liver Care</a>
+                                        <a href="">Mind Care</a>
+                                        <a href="">Cardiac Care</a>
+                                        <a href="">Ayurveda Women's Care>
+                                    </div>
+                                </a>  
+                            </li>
+                        </ul>
+                    </div>   
+                </div> 
+            </li>
+            <li >
+                <div class="group text-[14px]  p-[8px_4px] m-[0_4px]">
+                    <a href="" class="group-hover:visible hover:text-[#ff6f61]">Homeopathy</a>
+                    <i class="fa fa-angle-down drop-icon  "></i>
+                    <div id="health" class="pl-4 invisible group-hover:visible absolute z-30 text-left m-0 px-12px w-auto border font-bold  bg-white shadow-[0_2px_2px_rgba(0,0,0,0.2)] leading-8 left-[950px] ">
+                        <ul class="flex flex-row justify-between space-x-6 text-[12px]">
+                            <li>
+                                <a href="" class="">
+                                    <span class="font-bold">Homeopathy Top Brands</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">SBL Homeopathy</a>
+                                        <a href="">Dr. Reckeweg</a>
+                                        <a href="">Dr. Willmar Schwabe India</a>
+                                        <a href="">Adel Pekana</a>
+                                        <a href="">BJAIN Homeopathy>
+                                        <a href="">Baksons</a>
+                                        <a href="">Allen</a>
+                                        <a href="">Wheezal</a>
+                                        <a href="">Haslab</a>
+                                        <a href="">Medisynth</a>
+                                        <a href="">Boiron</a>
+                                        <a href="">Bhandari</a>
+                                        <a href="">Dr. Bakshi Bakson</a>
+                                        <a href="">Dr. Batra's</a>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <span class="font-bold">Homeopathy Wellness Combos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="w-[2px] h-[430px] bg-black opacity-20 mt-3"></div>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <span class="font-bold">Homeopathy Popular Categories</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Homeopathy Care for Cold</a>
+                                        <a href="">Homeopathy Respiratory Care</a>
+                                        <a href="">Homeopathy Covid Essential</a>
+                                        <a href="">Sexual Health</a>
+                                        <a href="">Hair Care Products</a>
+                                        <a href="">Skin Care Products
+                                        </a>
+                                        <a href="">Children's Care</a>
+                                        <a href="">Women's Health</a>
+                                    </div>
+                                </a>
+                                <a href="" class="">
+                                    <span class="font-bold">Homeopathy Medicines</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">homeopathic Drops</a>
+                                        <a href="">Dilutions</a>
+                                        <a href="">Mother Tinctures</a>
+                                        <a href="">Triturations</a>
+                                        <a href="">bio Combinations</a>
+                                        <a href="">Millesimal LM Potencies</a>
+                                        <a href="">Biochemics</a>
+                                        <a href="">Bach Flower Remedies</a>
+                                    </div>
+                                </a>        
+                            </li>
+
+                        </ul>
+                    </div>   
+                </div> 
+            </li>
+            <li >
+                <div class="group text-[14px] p-[8px_4px] m-[0_4px]">
+                    <a href="" class="group-hover:visible hover:text-[#ff6f61]">Featured</a>
+                    <i class="fa fa-angle-down drop-icon  "></i>
+                    <div id="health" class="pl-4 invisible group-hover:visible absolute z-30 text-left mr-2 m-0 px-12px w-[420px] border font-bold  bg-white shadow-[0_2px_2px_rgba(0,0,0,0.2)] leading-8 left-[1054px]  ">
+                        <ul class="flex flex-row justify-between space-x-6 text-[12px]">
+                            <li class="flex flex-col">
+                                <a href="" class="">
+                                    <span class="font-bold">Winter Care</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Body & Skin Care</a>
+                                        <a href="">Winter Hair &Scalp Care</a>
+                                        <a href="">Cough & Cold</a>
+                                        <a href="">Headache & Fever</a>
+                                        <a href="">Vaporizers & Nebulizers</a>
+                                        <a href="">Heating Aid</a>
+                                        <a href="">Best combos</a>
+                                    </div>
+                                </a>
+                            
+                       
+                                <a href="">
+                                    <span class="font-bold">Tata 1mg Health Products</span>
+                                </a>
+                
+                                <a href="">
+                                    <span class="font-bold">Trending Now</span>
+                                </a>
+                                <a href="">
+                                    <span class="font-bold">New Arrivals on Tata 1MG</span>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="w-[2px] h-[430px] bg-black opacity-20 mt-3"></div>
+                            </li>
+                            <li class="flex flex-col">
+                                <a href="" class="">
+                                    <span class="font-bold">Buy More,Save More</span>
+                                </a>
+                                <a href="" class="">
+                                    <span class="font-bold">Minimum 33% Off</span>
+                                </a>
+                                <a href="" class="">
+                                    <span class="font-bold">Popular Combo Deals</span>
+                                </a>
+                                <a href="" class="">
+                                    <span class="font-bold">Deals of the Day</span>
+                                </a>
+                                <a href="" class="">
+                                    <span class="font-bold">Top Brands</span>
+                                    <div class="flex flex-col opacity-50 text-[14px] font-normal">
+                                        <a href="">Accu-Chek</a>
+                                        <a href="">Ensure</a>
+                                        <a href="">Revital</a>
+                                        <a href="">Optimum Nutrition</a>
+                                        <a href="">Pediasure</a>
+                                        <a href="">Scalpe</a>
+                                        <a href="">Teddy</a>
+                                    </div>
+                                </a>
+                                <a href="" class="">
+                                    <span class="font-bold">Super savings</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>   
+                </div> 
+            </li>
+            
+        </ul>
+
+    </div>
+        
+        
+    </section>
+    <!-- image slider 1 -->
+    <section class="content">
+        <!-- image slider start -->
+        <div class="slider">
+            <div class="slides ">
+                <!-- radio buttons start -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+                <input type="radio" name="radio-btn" id="radio6">
+                <input type="radio" name="radio-btn" id="radio7">
+                <input type="radio" name="radio-btn" id="radio8">
+                <input type="radio" name="radio-btn" id="radio9">
+                <input type="radio" name="radio-btn" id="radio10">
+
+                <!-- radio buttons end -->
+                <!-- slide image start -->
+                <div class="slide first ">
+                    <img src="https://onemg.gumlet.io/57bd3de8-bc1b-4975-b6df-bd0daef81b28_1699519315.jpg?w=982&h=250&format=auto" alt="">
+                </div>
+                <div class="slide ">
+                    <img src="https://onemg.gumlet.io/2cc71d27-8728-4ce0-869d-03dc265e35fb_1699425809.png?w=982&h=250&format=auto" alt="">
+                </div>
+                <div class="slide ">
+                    <img src="https://onemg.gumlet.io/d0b34ce7-125a-4d1e-8837-412461e78117_1699426097.png?w=982&h=250&format=auto" alt="">
+                </div>
+                <div class="slide ">
+                    <img src="https://onemg.gumlet.io/8309f4cd-aef6-4718-84f6-15d0662094c8_1698303531.jpg?w=982&h=250&format=auto" alt="">
+                </div>
+                <div class="slide ">
+                    <img src="https://onemg.gumlet.io/72947514-fa1f-4609-8d00-d15d50206395_1696160835.jpg?w=982&h=250&format=auto" alt="">
+                </div>
+                <div class="slide ">
+                    <img src="https://onemg.gumlet.io/77e92378-353b-4c98-ac4d-39c34f36ece4_1695037956.png?w=982&h=250&format=auto" alt="">
+                </div>
+                <div class="slide ">
+                    <img src="https://onemg.gumlet.io/33eab3f0-49a1-476d-8c1f-2fe4159bcf4d_1679394544.png?w=982&h=250&format=auto" alt="">
+                </div>
+                <div class="slide ">
+                    <img src="https://onemg.gumlet.io/2d5ed941-19f4-4bf8-ab40-11504ce17e2b_1698826299.png?w=982&h=250&format=auto" alt="">
+                </div>
+                <div class="slide ">
+                    <img src="https://onemg.gumlet.io/diagnostics%2F2023-10%2F1698172904_NewDLSHomepage_NeuCoins_960x200_2.png?w=982&h=250&format=auto" alt="">
+                </div>
+                <div class="slide ">
+                    <img src="https://onemg.gumlet.io/diagnostics%2F2023-07%2F1690275316_55862f78-7fff-4519-82fc-ebab1e517fdf.webp?w=982&h=250&format=auto" alt="">
+                </div>
+
+                <!-- slide image stop -->
+                <!-- automatic navigation -->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                    <div class="auto-btn6"></div>
+                    <div class="auto-btn7"></div>
+                    <div class="auto-btn8"></div>
+                    <div class="auto-btn9"></div>
+                    <div class="auto-btn10"></div>
+
+                </div>
+                <!-- navigation end -->
+            </div>
+            <!-- manual navigation start -->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+                <label for="radio6" class="manual-btn"></label>
+                <label for="radio7" class="manual-btn"></label>
+                <label for="radio8" class="manual-btn"></label>
+                <label for="radio9" class="manual-btn"></label>
+                <label for="radio10" class="manual-btn"></label>
+
+            </div>
+            <!-- manual navigation end -->
+        </div>
+        <div>
+            <img class="w-[570px] h-[200px]" src="https://onemg.gumlet.io/diagnostics%2F2023-11%2F1699505646_Range_1948x800+%284%29.png" alt="">
+        </div>
+
+    </section>
+    <!-- rhyme -->
+    <div class="absolute w-full bg-white border  border-[#e0e0e0] mt-[-510px]  ">
+        <p class="text-[22px] text-center  opacity-60 p-5">Tata 1mg: India’s Leading Online Pharmacy & Healthcare Platform</p>
+    </div>
+    <!-- simple image -->
+    <section class="w-[100%] h-[180px] pl-[80px] pt-8 mt-[-440px] bg-[#f3f3f3]">
+        <a href="">
+            <img class="w-[94%]  z-5" src="https://onemg.gumlet.io/marketing/d037f049-0426-43b5-b365-c89ccd788d2d.png" alt="">
+        </a>
+    </section>
+
+
+    <!-- image slider 2 -->
+    <div class="w-full h-[40px] bg-[#f3f3f3] pl-[80px]">
+        <div>
+            <h1 class="text-[#212121] text-[18px]">Shop by health concerns</h1>
+        </div>
+    </div>
+<section class="w-full bg-white shadow-[0_0_14px_0_rgba(0,0,0,.28)] ">
+<div class="slider-container text-center">
+    <div id="fex-col" class="slider-item flex-col justify-between items-center">
+        <a href="" >
+            <img id="image" src="https://onemg.gumlet.io/a56b26a0-30f1-4977-96f8-7acf1b3e0e02.png?format=auto" alt="">
+            <span class="text-[14px] font-[500] ">Diabetes </span>
+        </a>
+    </div>
+    <div id="fex-col" class="slider-item flex-col">
+        <a href="">
+            <img id="image" src="https://onemg.gumlet.io/573d8a1a-edd0-46a5-a0fe-01a1c2bcc8f2.png?format=auto" alt="">
+        </a>
+        <span class="text-[14px] font-[500] ">Liver Care</span>
+    </div>
+
+    <div id="fex-col" class="slider-item flex-col">
+        <a href="">
+          <img id="image" src="https://onemg.gumlet.io/a1af8b43-2836-483d-8709-99eff1cc6f70.png?format=auto" alt="">
+        </a>
+        <span class="text-[14px] font-[500] ">Bone, Joint & Muscle <br>Care</span>
+    </div>
+    <div id="fex-col" class="slider-item flex-col">
+        <a href="">
+            <img id="image" src="https://onemg.gumlet.io/96f9ed8a-ba62-426c-bd66-6762f40f3370.png?format=auto" alt="">
+        </a>
+    <span  class="text-[14px] font-[500] ">Kidney Care</span>
+    </div>
+    <div id="fex-col" class="slider-item flex-col">
+        <a href="">
+            <img id="image" src="https://onemg.gumlet.io/730dbe50-4bdc-4fa8-9a09-93bc5d6c6f38.png?format=auto" alt="">
+        </a>
+        <span  class="text-[14px] font-[500] ">Derma Care</span>
+    </div>
+    <div id="fex-col" class="slider-item flex-col">
+        <a href="">
+            <img id="image" src="https://onemg.gumlet.io/8051e79c-6152-440e-b402-8d1ba8d7c82e.png?format=auto" alt="">
+        </a>
+        <span  class="text-[14px] font-[500] ">Respiratory Care</span>
+    </div>
+    <div id="fex-col" class="slider-item flex-col">
+        <a href="">
+            <img id="image" src="https://onemg.gumlet.io/629aaf65-515f-4069-b730-28618f78597b.png?format=auto" alt="">
+         </a>
+        <span  class="text-[14px] font-[500] ">Heart Care</span>
+    </div>
+    <div id="fex-col" class="slider-item flex-col">
+        <a href="">
+            <img id="image" src="https://onemg.gumlet.io/b251c9cf-8d88-4fb8-8c3c-7b328caa9f70.png?format=auto" alt="">
+        </a>
+        <span  class="text-[14px] font-[500] ">Stomach Care</span>
+    </div>
+    <div id="fex-col" class="slider-item flex-col">
+        <a href="">
+            <img id="image" src="https://onemg.gumlet.io/1627c0d3-a6ed-470a-8b18-94baa9fdbcfc.png?format=auto" alt="">
+        </a>
+        <span  class="text-[14px] font-[500] ">Eye Care</span>
+    </div>
+    </div>
+    <div class="w-full flex flex-row">
+        <button id="prev" onclick="prevSlide()">&#10094;</button>
+        <button id="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+</section>
+<div class="w-full h-[80px] bg-[#f3f3f3] pl-[80px] flex flex-row justify-between">
+    <div>
+        <h1 class="text-[#212121] text-[18px] pt-10">Full body health checkups</h1>
+    </div>
+    <button class=" relative rounded-md w-[80px] bg-[#ff6f61] h-10 pl-[4px] pr-[4px] ml-2  text-white font-bold text-[14px]  items-center
+    hover:cursor-pointer mt-8  mr-10 ">See All</button>
+    
+</div>
+<section class="w-full bg-white shadow-[0_0_14px_0_rgba(0,0,0,.24)] h-[160px] ">
+    <div class="slider-container2 ">
+        
+        <div class="slider-item2 flex flex-col justify-between ">
+                <div class="flex flex-row gap-x-6">
+                    <span class="text-[14px] font-bold">Good Health Smart Package</span>
+                    <div class="w-[65px] h-6  bg-[#ffc0ba] flex flex-row gap-x-1 text-[14px] font-bold">
+                        <img class="pl-1" src="https://onemg.gumlet.io/safe_bjisiz.svg" alt="Safe">
+                        <span class="">SAFE</span>
+                    </div>
+                </div>
+                <div class="flex flex-row justify-start ">
+                    <p class="text-[18px] mr-2">&#x20b9; 399</p>
+                    <strike class="opacity-80">&#x20b9; 800</strike>
+                    <div class="w-[52px] h-5 bg-green-200 border-2 border-dashed border-green-500 ml-3">
+                        <p class="text-[12px] text-green-600">50% OFF</p>
+                    </div>
+                </div>
+        </div>
+        <div class="slider-item2 flex flex-col justify-between ">
+            <div class="flex flex-row gap-x-6">
+                <span class="text-[14px] font-bold">Comprehensive Gold Full B...</span>
+                <div class="w-[65px] h-6  bg-[#ffc0ba] flex flex-row gap-x-1 text-[14px] font-bold">
+                    <img class="pl-1" src="https://onemg.gumlet.io/safe_bjisiz.svg" alt="Safe">
+                    <span class="">SAFE</span>
+                </div>
+            </div>
+            <div class="flex flex-row justify-start ">
+                <p class="text-[18px] mr-2">&#x20b9; 2199</p>
+                <strike class="opacity-80">&#x20b9; 4398</strike>
+                <div class="w-[52px] h-5 bg-green-200 border-2 border-dashed border-green-500 ml-3">
+                    <p class="text-[12px] text-green-600">50% OFF</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item2 flex flex-col justify-between ">
+            <div class="flex flex-row gap-x-6">
+                <span class="text-[14px] font-bold">Good health Silver Package</span>
+                <div class="w-[65px] h-6  bg-[#ffc0ba] flex flex-row gap-x-1 text-[14px] font-bold">
+                    <img class="pl-1" src="https://onemg.gumlet.io/safe_bjisiz.svg" alt="Safe">
+                    <span class="">SAFE</span>
+                </div>
+            </div>
+            <div class="flex flex-row justify-start ">
+                <p class="text-[18px] mr-2">&#x20b9; 699</p>
+                <strike class="opacity-80">&#x20b9; 1398 </strike>
+                <div class="w-[52px] h-5 bg-green-200 border-2 border-dashed border-green-500 ml-3">
+                    <p class="text-[12px] text-green-600">50% OFF</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item2 flex flex-col justify-between ">
+            <div class="flex flex-row gap-x-6">
+                <span class="text-[14px] font-bold">Comprehensive Gold Full B...</span>
+                <div class="w-[65px] h-6  bg-[#ffc0ba] flex flex-row gap-x-1 text-[14px] font-bold">
+                    <img class="pl-1" src="https://onemg.gumlet.io/safe_bjisiz.svg" alt="Safe">
+                    <span class="">SAFE</span>
+                </div>
+            </div>
+            <div class="flex flex-row justify-start ">
+                <p class="text-[18px] mr-2">&#x20b9; 1749</p>
+                <strike class="opacity-80">&#x20b9; 3498</strike>
+                <div class="w-[52px] h-5 bg-green-200 border-2 border-dashed border-green-500 ml-3">
+                    <p class="text-[12px] text-green-600">50% OFF</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item2 flex flex-col justify-between ">
+            <div class="flex flex-row gap-x-6">
+                <span class="text-[14px] font-bold">Women Wellness Premiumm...</span>
+                <div class="w-[65px] h-6  bg-[#ffc0ba] flex flex-row gap-x-1 text-[14px] font-bold">
+                    <img class="pl-1" src="https://onemg.gumlet.io/safe_bjisiz.svg" alt="Safe">
+                    <span class="">SAFE</span>
+                </div>
+            </div>
+            <div class="flex flex-row justify-start ">
+                <p class="text-[18px] mr-2">&#x20b9; 1899</p>
+                <strike class="opacity-80">&#x20b9; 3798</strike>
+                <div class="w-[52px] h-5 bg-green-200 border-2 border-dashed border-green-500 ml-3">
+                    <p class="text-[12px] text-green-600">50% OFF</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item2 flex flex-col justify-between ">
+            <div class="flex flex-row gap-x-6">
+                <span class="text-[14px] font-bold">Comprehensive Platinum F...</span>
+                <div class="w-[65px] h-6  bg-[#ffc0ba] flex flex-row gap-x-1 text-[14px] font-bold">
+                    <img class="pl-1" src="https://onemg.gumlet.io/safe_bjisiz.svg" alt="Safe">
+                    <span class="">SAFE</span>
+                </div>
+            </div>
+            <div class="flex flex-row justify-start ">
+                <p class="text-[18px] mr-2">&#x20b9; 3549</p>
+                <strike class="opacity-80">&#x20b9; 7098</strike>
+                <div class="w-[52px] h-5 bg-green-200 border-2 border-dashed border-green-500 ml-3">
+                    <p class="text-[12px] text-green-600">50% OFF</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item2 flex flex-col justify-between ">
+            <div class="flex flex-row gap-x-6">
+                <span class="text-[14px] font-bold">Good Health Platinum Pack...</span>
+                <div class="w-[65px] h-6  bg-[#ffc0ba] flex flex-row gap-x-1 text-[14px] font-bold">
+                    <img class="pl-1" src="https://onemg.gumlet.io/safe_bjisiz.svg" alt="Safe">
+                    <span class="">SAFE</span>
+                </div>
+            </div>
+            <div class="flex flex-row justify-start ">
+                <p class="text-[18px] mr-2">&#x20b9; 1349</p>
+                <strike class="opacity-80">&#x20b9; 2698</strike>
+                <div class="w-[52px] h-5 bg-green-200 border-2 border-dashed border-green-500 ml-3">
+                    <p class="text-[12px] text-green-600">50% OFF</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item2 flex flex-col justify-between ">
+            <div class="flex flex-row gap-x-6">
+                <span class="text-[14px] font-bold">Senior Citizen Advanced Pa...</span>
+                <div class="w-[65px] h-6  bg-[#ffc0ba] flex flex-row gap-x-1 text-[14px] font-bold">
+                    <img class="pl-1" src="https://onemg.gumlet.io/safe_bjisiz.svg" alt="Safe">
+                    <span class="">SAFE</span>
+                </div>
+            </div>
+            <div class="flex flex-row justify-start ">
+                <p class="text-[18px] mr-2">&#x20b9; 1675</p>
+                <strike class="opacity-80">&#x20b9; 3350</strike>
+                <div class="w-[52px] h-5 bg-green-200 border-2 border-dashed border-green-500 ml-3">
+                    <p class="text-[12px] text-green-600">50% OFF</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item2 flex flex-col justify-between ">
+            <div class="flex flex-row gap-x-6">
+                <span class="text-[14px] font-bold">Men health Premiumm Package</span>
+                <div class="w-[65px] h-6  bg-[#ffc0ba] flex flex-row gap-x-1 text-[14px] font-bold">
+                    <img class="pl-1" src="https://onemg.gumlet.io/safe_bjisiz.svg" alt="Safe">
+                    <span class="">SAFE</span>
+                </div>
+            </div>
+            <div class="flex flex-row justify-start ">
+                <p class="text-[18px] mr-2">&#x20b9; 1899</p>
+                <strike class="opacity-80">&#x20b9; 3798</strike>
+                <div class="w-[52px] h-5 bg-green-200 border-2 border-dashed border-green-500 ml-3">
+                    <p class="text-[12px] text-green-600">50% OFF</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item2 flex flex-col justify-between ">
+            <div class="flex flex-row gap-x-6">
+                <span class="text-[14px] font-bold">Fever Package Extensive(in...</span>
+                <div class="w-[65px] h-6  bg-[#ffc0ba] flex flex-row gap-x-1 text-[14px] font-bold">
+                    <img class="pl-1" src="https://onemg.gumlet.io/safe_bjisiz.svg" alt="Safe">
+                    <span class="">SAFE</span>
+                </div>
+            </div>
+            <div class="flex flex-row justify-start ">
+                <p class="text-[18px] mr-2">&#x20b9; 1069</p>
+                <strike class="opacity-80">&#x20b9; 1222</strike>
+                <div class="w-[52px] h-5 bg-green-200 border-2 border-dashed border-green-500 ml-3">
+                    <p class="text-[12px] text-green-600">13% OFF</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item2 flex flex-col justify-between ">
+            <div class="flex flex-row gap-x-6">
+                <span class="text-[14px] font-bold">Good Health Gold Package</span>
+                <div class="w-[65px] h-6  bg-[#ffc0ba] flex flex-row gap-x-1 text-[14px] font-bold">
+                    <img class="pl-1" src="https://onemg.gumlet.io/safe_bjisiz.svg" alt="Safe">
+                    <span class="">SAFE</span>
+                </div>
+            </div>
+            <div class="flex flex-row justify-start ">
+                <p class="text-[18px] mr-2">&#x20b9; 999</p>
+                <strike class="opacity-80">&#x20b9; 1998</strike>
+                <div class="w-[52px] h-5 bg-green-200 border-2 border-dashed border-green-500 ml-3">
+                    <p class="text-[12px] text-green-600">50% OFF</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item2 flex flex-col justify-between ">
+            <div class="flex flex-row gap-x-6">
+                <span class="text-[14px] font-bold">Senoir Citizen Comprehensi...</span>
+                <div class="w-[65px] h-6  bg-[#ffc0ba] flex flex-row gap-x-1 text-[14px] font-bold">
+                    <img class="pl-1" src="https://onemg.gumlet.io/safe_bjisiz.svg" alt="Safe">
+                    <span class="">SAFE</span>
+                </div>
+            </div>
+            <div class="flex flex-row justify-start ">
+                <p class="text-[18px] mr-2">&#x20b9; 3699</p>
+                <strike class="opacity-80">&#x20b9; 7398</strike>
+                <div class="w-[52px] h-5 bg-green-200 border-2 border-dashed border-green-500 ml-3">
+                    <p class="text-[12px] text-green-600">50% OFF</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="w-full flex flex-row">
+        <button id="customPrev" onclick="showPreviousCustom()">❮</button>
+        <button id="customNext" onclick="showNextCustom()">❯</button>
+    </div>
+      
+</section>        
+
+<div class="w-full h-[80px] bg-[#f3f3f3] pl-[80px]">
+    <div>
+        <h1 class="text-[#212121] text-[18px] pt-[35px]">Featured brands</h1>
+    </div>
+</div>
+<section  class="w-full  bg-white shadow-[0_0_7px_0_rgba(0,0,0,.28)] h-[212px]">
+    <div class="slider-container3">
+        <div class="slider-item3">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-11%2F1699853129_Morepen.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+        <div class="slider-item3">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-11%2F1699853137_Dabur.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+        <div class="slider-item3">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-11%2F1699853144_Hansaplast.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+        <div class="slider-item3">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-11%2F1699853152_Vansaar+DLS.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+        <div class="slider-item3">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-11%2F1699853160_Protinex1.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+        <div class="slider-item3">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-11%2F1699853169_Kapiva.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+        <div class="slider-item3">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-11%2F1699853169_Kapiva.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+        <div class="slider-item3">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-11%2F1699853180_Baidyanath+Nagpur.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+        <div class="slider-item3">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-10%2F1698727729_tejasya.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+        <div class="slider-item3">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-10%2F1698727744_Tata+1mg.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+    </div>
+
+        <div class="w-full flex flex-row">
+        <button id="customPrev3" onclick="showPreviousCustom3()">❮</button>
+        <button id="customNext3" onclick="showNextCustom3()">❯</button>
+    </div>
+
+</section>
+<div class="w-full h-[80px] bg-[#f0f0f0] pl-[80px] ">
+    <div>
+        <h1 class="text-[#212121] text-[18px] pt-[35px]">Shilajit | Supplement of the week</h1>
+    </div>
+</div>
+
+<section  class="w-full  bg-white shadow-[0_0_7px_0_rgba(0,0,0,.28)] h-[400px]">
+    <div class="slider-container4 gap-x-10">
+        <div class="slider-item4 pl-[-10px]">
+            <img class="m-6 mt-4" width="80" height="165" src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/c027b3e7a6c64ffd924f6bd65695e460.jpg" alt="">
+            <span class="mt-[27px] text-[14px] text-star ml-[-2px]">Tata 1mg Tejasya Shilajit Capsule 500mg</span>
+            <span class="mx-2 opacity-70 text-[12px] ml-[-2px]">bottle of 60 capsules</span>
+            <p class="opacity-70 text-[12px] ml[-2px] mt-[5px]">Delivery by <span class="font-extrabold">Tommorow</span></p>
+            <br>
+            <div class="flex flex-row mt-[-5px] opacity-70 text-[14px] ">
+                <p>MRP <strike>&#x20b9; 395</strike></p>
+                <p class="text-[12px] text-green-600 ml-2 ">38% off</p>
+            </div>
+            <p class="text-[18px]">&#x20b9; 245</p>           
+        </div>
+        <div class="slider-item4 pl-[-10px] flex-col">
+            <div >
+                <img class=" mt-4 h-[165px] ml-2 mb-6" width="122"  src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/427b85bebcfa4a2388dda205fc62fa41.jpg" alt="">
+            </div>
+            <div>
+                <span class="mt-[47px] text-[14px] text-star ml-[-2px]">kapiva Himalayan Shilajit</span>
+            </div>
+            <div>
+                <span class="mx-2 opacity-70 text-[12px] ml-[-2px]">jar of 20 gm pack</span>
+            </div>
+                <p class="opacity-70 text-[12px] ml[-2px] mt-[5px]">Delivery by <span class="font-extrabold">Tommorow</span></p>
+            <br>
+            <div class="flex flex-row mt-[-5px] opacity-70 text-[14px] ">
+                <p>MRP <strike>&#x20b9; 1499</strike></p>
+                <p class="text-[12px] text-green-600 ml-2 ">38% off</p>
+            </div>
+            <p class="text-[18px]">&#x20b9; 999</p>           
+        </div>
+        <div class="slider-item4 pl-[-10px]">
+            <div >
+                <img class=" mt-4 h-[165px] mb-6"  src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/481410623d3c4c198e60610d1cf5b5df.jpg" alt="">
+            </div>
+            <div >
+                <span class="mt-[27px] text-[14px] text-star ml-[-2px] ">Dabar Shilajit Capsule</span>
+            </div>
+            <div class="mt-6">
+                <span class="mx-2 opacity-70 text-[12px] ml-[-2px]  ">bottle of 100 capsules</span>
+            </div>
+
+                <p class="opacity-70 text-[12px] ml[-2px] mt-[5px]">Delivery by <span class="font-extrabold">Tommorow</span></p>
+            <br>
+            <div class="flex flex-row mt-[-5px] opacity-70 text-[14px] ">
+                <p>MRP <strike>&#x20b9; 550</strike></p>
+                <p class="text-[12px] text-green-600 ml-2 ">15% off</p>
+            </div>
+            <p class="text-[18px]">&#x20b9; 468</p>           
+        </div>
+        <div class="slider-item4 pl-[-10px]">
+            <div >
+                <img class=" mt-4 h-[165px] mb-6"  src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/b30aa7cbfd7f47f0ba1be5292289c592.jpg" alt="">
+            </div>
+            <div >
+                <span class="mt-[27px] text-[14px] text-star ml-[-2px] ">Dr. Morepen Natural & Pure Shilajit Resin Form</span>
+            </div>
+            <div class="">
+                <span class="mx-2 opacity-70 text-[12px] ml-[-2px]  ">jar of 15 gm Liquid</span>
+            </div>
+            <div class="mb-6">
+                <p class="opacity-70 text-[12px] ml[-2px] mt-[5px]">Delivery by <span class="font-extrabold">Tommorow</span></p>
+            </div>
+
+            <div class="flex flex-row mt-[-5px] opacity-70 text-[14px] ">
+                <p>MRP <strike>&#x20b9; 1499</strike></p>
+                <p class="text-[12px] text-green-600 ml-2 ">40% off</p>
+            </div>
+            <p class="text-[18px]">&#x20b9; 899</p>           
+        </div>
+        <div class="slider-item4 pl-[-10px]">
+            <div >
+                <img class=" mt-4 h-[165px] mb-6"  src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/678db4b20f6b42e59c2a2b78f63d1445.jpg" alt="">
+            </div>
+            <div >
+                <span class="mt-[27px] text-[14px] text-star ml-[-2px] ">Sri Sri Tattva <br> Shilajitvadi Lauha Vat... </span>
+            </div>
+            <div class="">
+                <span class="mx-2 opacity-70 text-[12px] ml-[-2px]  ">bottle of 60 Capsule</span>
+            </div>
+            <div class="mb-6">
+                <p class="opacity-70 text-[12px] ml[-2px] mt-[5px]">Delivery by <span class="font-extrabold">Tommorow</span></p>
+            </div>
+
+            <div class="flex flex-row mt-[-5px] opacity-70 text-[14px] ">
+                <p>MRP <strike>&#x20b9; 395</strike></p>
+                <p class="text-[12px] text-green-600 ml-2 ">38% off</p>
+            </div>
+            <p class="text-[18px]">&#x20b9; 245</p>           
+        </div>
+        <div class="slider-item4 pl-[-10px]">
+            <div >
+                <img class=" mt-4 h-[165px] mb-6"  src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/ec39d0feece84e84a8875a371b4ad2e9.jpg" alt="">
+            </div>
+            <div >
+                <span class="mt-[27px] text-[14px] text-star ml-[-2px] ">Baidyanath Shilajeet Tablet for Strength &...</span>
+            </div>
+            <div class="">
+                <span class="mx-2 opacity-70 text-[12px] ml-[-2px]  ">bottle of 50 Capsule</span>
+            </div>
+            <div class="mb-6">
+                <p class="opacity-70 text-[12px] ml[-2px] mt-[5px]">Delivery by <span class="font-extrabold">Tommorow</span></p>
+            </div>
+            <div class="flex flex-row mt-[-5px] opacity-70 text-[14px] ">
+                <p>MRP <strike>&#x20b9; 265</strike></p>
+                <p class="text-[12px] text-green-600 ml-2 ">27% off</p>
+            </div>
+            <p class="text-[18px]">&#x20b9; 193</p>           
+        </div>
+        <div class="slider-item4 pl-[-10px]">
+            <div >
+                <img class=" mt-4 h-[165px] mb-6"  src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/cropped/qczwjg5jrjtghyk7t5lf.png" alt="">
+            </div>
+            <div >
+                <span class="mt-[27px] text-[14px] text-star ml-[-2px] ">G & G Pharmacy Shilajit Gold Capsule </span>
+            </div>
+            <div class="">
+                <span class="mx-2 opacity-70 text-[12px] ml-[-2px]  ">box of 50 Capsule</span>
+            </div>
+            <div class="mb-6">
+                <p class="opacity-70 text-[12px] ml[-2px] mt-[5px]">Delivery by <span class="font-extrabold">Fri, 17 Nov</span></p>
+            </div>
+            <div class="flex flex-row mt-[-5px] opacity-70 text-[14px] ">
+                <p>MRP <strike>&#x20b9; 1090</strike></p>
+                <p class="text-[12px] text-green-600 ml-2 ">28% off</p>
+            </div>
+            <p class="text-[18px]">&#x20b9; 786</p>           
+        </div>
+        <div class="slider-item4 pl-[-10px]">
+            <div >
+                <img class=" mt-4 h-[165px] mb-6 ml-2"  src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/cropped/yv2nxbdfme3ljjxidhty.png" alt="">
+            </div>
+            <div >
+                <span class="mt-[27px] text-[14px] text-star ml-[-2px] ">Potentveda Wild Shilajit Extreme Capsule </span>
+            </div>
+            <div class="">
+                <span class="mx-2 opacity-70 text-[12px] ml-[-2px]  ">bottle of 90 Capsule</span>
+            </div>
+            <div class="mb-6">
+                <p class="opacity-70 text-[12px] ml[-2px] mt-[5px]">Delivery by <span class="font-extrabold">Thu, 16 Nov</span></p>
+            </div>
+            <div class="flex flex-row mt-[-5px] opacity-70 text-[14px] ">
+                <p>MRP <strike>&#x20b9; 1499</strike></p>
+                <p class="text-[12px] text-green-600 ml-2 ">59% off</p>
+            </div>
+            <p class="text-[18px]">&#x20b9; 614</p>           
+        </div>
+        <div class="slider-item4 pl-[-10px]">
+            <div >
+                <img class=" mt-4 h-[165px] mb-6"  src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/a50655f0f1f647bfb59cae4ee853b263.jpg" alt="">
+            </div>
+            <div >
+                <span class="mt-[27px] text-[14px] text-star ml-[-2px] ">Dabur Shilajit Gold Capsule </span>
+            </div>
+            <div class="">
+                <span class="mx-2 opacity-70 text-[12px] ml-[-2px]  ">bottle of 20 Capsule</span>
+            </div>
+            <div class="mb-6">
+                <p class="opacity-70 text-[12px] ml[-2px] mt-[5px]">Delivery by <span class="font-extrabold">Tommorow</span></p>
+            </div>
+            <div class="flex flex-row mt-[-5px] opacity-70 text-[14px] ">
+                <p>MRP <strike>&#x20b9; 500</strike></p>
+                <p class="text-[12px] text-green-600 ml-2 ">16% off</p>
+            </div>
+            <p class="text-[18px]">&#x20b9; 420</p>           
+        </div>
+        <div class="slider-item4 pl-[-10px]">
+            <div >
+                <img class=" mt-4 h-[165px] mb-6 ml-5"  src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/o9i75f6grrpfw4d1ajpy.jpg" alt="">
+            </div>
+            <div >
+                <span class="mt-[27px] text-[14px] text-star ml-[-2px] ">Cipzer Shilajeet Ultra Gold Capsule </span>
+            </div>
+            <div class="">
+                <span class="mx-2 opacity-70 text-[12px] ml-[-2px]  ">bottle of 60 Capsule</span>
+            </div>
+            <div class="mb-6">
+                <p class="opacity-70 text-[12px] ml[-2px] mt-[5px]">Delivery by <span class="font-extrabold">Thu, 16 Nov</span></p>
+            </div>
+            <div class="flex flex-row mt-[-5px] opacity-70 text-[14px] ">
+                <p>MRP <strike>&#x20b9; 499</strike></p>
+                <p class="text-[12px] text-green-600 ml-2 ">6% off</p>
+            </div>
+            <p class="text-[18px]">&#x20b9; 469</p>           
+        </div>
+        <div class="slider-item4 pl-[-10px]">
+            <div >
+                <img class=" mt-4 h-[165px] mb-6 "  src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/okmpstdwnm4ruvvhjsgn.jpg" alt="">
+            </div>
+            <div >
+                <span class="mt-[27px] text-[14px] text-star ml-[-2px] ">Patanjali Divya Shilajeet Rasayan Vati </span>
+            </div>
+            <div class="">
+                <span class="mx-2 opacity-70 text-[12px] ml-[-2px]  ">bottle of 60 Capsule</span>
+            </div>
+            <div class="mb-6">
+                <p class="opacity-70 text-[12px] ml[-2px] mt-[5px]">Delivery by <span class="font-extrabold">Tomorrow</span></p>
+            </div>
+
+            <p class="text-[18px]"><span class="text-[14px] opacity-70">MRP</span>&#x20b9; 40</p>           
+        </div>
+        <div class="slider-item4 pl-[-10px]">
+            <div >
+                <img class=" mt-4 h-[165px] mb-6 "  src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/0aaef040286c47349b96b828d4102cbb.jpg" alt="">
+            </div>
+            <div >
+                <span class="mt-[27px] text-[14px] text-star ml-[-2px] ">Patanjali Ayurveda Shilajit Capsule</span>
+            </div>
+            <div class="">
+                <span class="mx-2 opacity-70 text-[12px] ml-[-2px]  ">box of 20 Capsule</span>
+            </div>
+            <div class="mb-6">
+                <p class="opacity-70 text-[12px] ml[-2px] mt-[5px]">Delivery by <span class="font-extrabold">Tomorrow</span></p>
+            </div>
+            <p class="text-[18px]"><span class="text-[14px] opacity-70">MRP</span>&#x20b9; 100</p>           
+
+        </div>
+        <div class="slider-item4 pl-[-10px]">
+            <div >
+                <img class=" mt-4 h-[165px] mb-6 "  src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/mljnh3eiwbxws6yrapfy.jpg" alt="">
+            </div>
+            <div >
+                <span class="mt-[27px] text-[14px] text-star ml-[-2px] ">Dabur Shilajit Double Gold Capsule</span>
+            </div>
+            <div class="">
+                <span class="mx-2 opacity-70 text-[12px] ml-[-2px]  ">box of 10 Capsule</span>
+            </div>
+            <div class="mb-6">
+                <p class="opacity-70 text-[12px] ml[-2px] mt-[5px]">Delivery by <span class="font-extrabold">Tomorrow</span></p>
+            </div>
+            <div class="flex flex-row mt-[-5px] opacity-70 text-[14px] ">
+                <p>MRP <strike>&#x20b9; 400</strike></p>
+                <p class="text-[12px] text-green-600 ml-2 ">18% off</p>
+            </div>
+            <p class="text-[18px]">&#x20b9; 330</p>           
+        </div>
+
+    </div>
+    
+    <div class="w-full flex flex-row">
+        <button id="customPrev4" onclick="showPreviousCustom4()">❮</button>
+        <button id="customNext4" onclick="showNextCustom4()">❯</button>
+    </div>
+</section>
+
+<div class="w-full h-[80px] bg-[#f3f3f3] pl-[80px] flex flex-row justify-between">
+    <div>
+        <h1 class="text-[#212121] text-[18px] pt-10">Pathology Tests | Up to 70% off</h1>
+    </div>
+    <button class=" relative rounded-md w-[80px] bg-[#ff6f61] h-10 pl-[4px] pr-[4px] ml-2  text-white font-bold text-[14px]  items-center
+    hover:cursor-pointer mt-8  mr-10 ">See All</button>
+    
+</div>
+
+<section class="w-full bg-white shadow-[0_0_14px_0_rgba(0,0,0,.24)] h-[160px] ">
+    <div class="slider-container5 ">
+        
+        <div class="slider-item5 flex flex-col justify-between ">
+            <div class="flex flex-col">
+                <div class="flex flex-row gap-x-6">
+                    <span class="text-[14px] font-bold">Coronavirus Covid-19 Test-...</span>
+                        <div class="w-[65px] h-6  bg-[#ffc0ba] flex flex-row gap-x-1 text-[14px] font-bold">
+                        <img class="pl-1" src="https://onemg.gumlet.io/safe_bjisiz.svg" alt="Safe">
+                        <span class="">SAFE</span>
+                    </div>
+                </div>
+                <div class="">
+                    <span class="text-[14px] opacity-70 ">Also Known as RT-PCR technique, Sars-C...</span>
+                </div>
+            </div>    
+            <div class=" ">
+                <p class="text-[18px] mr-2">&#x20b9; 500</p>
+            </div>
+        </div>
+
+        <div class="slider-item5 flex flex-col justify-between ">
+            <div class="flex flex-col">
+                <div class="flex flex-row gap-x-6">
+                    <span class="text-[14px] font-bold">LFT (Liver Function Test)</span>
+                        <div class="w-[65px] h-6  bg-[#ffc0ba] flex flex-row gap-x-1 text-[14px] font-bold">
+                        <img class="pl-1" src="https://onemg.gumlet.io/safe_bjisiz.svg" alt="Safe">
+                        <span class="">SAFE</span>
+                    </div>
+                </div>
+                <div class="">
+                    <span class="text-[14px] opacity-70 ">Contains 11 tests</span>
+                </div>
+            </div>    
+            <div class=" ">
+                <p class="text-[18px] mr-2">&#x20b9; 399</p>
+            </div>
+        </div>
+
+        <div class="slider-item5 flex flex-col justify-between ">
+            <div class="flex flex-col">
+                <div class="flex flex-row gap-x-6">
+                    <span class="text-[14px] font-bold">Frequent Pain Check Profile</span>
+                        <div class="w-[65px] h-6  bg-[#ffc0ba] flex flex-row gap-x-1 text-[14px] font-bold">
+                        <img class="pl-1" src="https://onemg.gumlet.io/safe_bjisiz.svg" alt="Safe">
+                        <span class="">SAFE</span>
+                    </div>
+                </div>
+                <div class="">
+                    <span class="text-[14px] opacity-70 ">Contains 4 tests</span>
+                </div>
+            </div>    
+            <div class=" ">
+                <p class="text-[18px] mr-2">&#x20b9; 299</p>
+            </div>
+        </div>
+
+        <div class="slider-item5 flex flex-col justify-between ">
+            <div class="flex flex-col">
+                <div class="flex flex-row gap-x-6">
+                    <span class="text-[14px] font-bold">KFT with Electolytes(Kidn..</span>
+                        <div class="w-[65px] h-6  bg-[#ffc0ba] flex flex-row gap-x-1 text-[14px] font-bold">
+                        <img class="pl-1" src="https://onemg.gumlet.io/safe_bjisiz.svg" alt="Safe">
+                        <span class="">SAFE</span>
+                    </div>
+                </div>
+                <div class="">
+                    <span class="text-[14px] opacity-70 ">Contains 6 tests</span>
+                </div>
+            </div>    
+            <div class=" ">
+                <p class="text-[18px] mr-2">&#x20b9; 399</p>
+            </div>
+        </div>
+
+        <div class="slider-item5 flex flex-col justify-between ">
+            <div class="flex flex-col">
+                <div class="flex flex-row gap-x-6">
+                    <span class="text-[14px] font-bold">Vitamin B12</span>
+                        <div class="w-[65px] h-6  bg-[#ffc0ba] flex flex-row gap-x-1 text-[14px] font-bold">
+                        <img class="pl-1" src="https://onemg.gumlet.io/safe_bjisiz.svg" alt="Safe">
+                        <span class="">SAFE</span>
+                    </div>
+                </div>
+                <div class="">
+                    <span class="text-[14px] opacity-70 ">Also Known as CyanocoBalamin, Methylco...</span>
+                </div>
+            </div>    
+            <div class=" ">
+                <p class="text-[18px] mr-2">&#x20b9; 475</p>
+            </div>
+        </div>
+    </div>
+    <div class="w-full flex flex-row">
+        <button id="customPrev5" onclick="showPreviousCustom5()">❮</button>
+        <button id="customNext5" onclick="showNextCustom5()">❯</button>
+    </div>
+      
+</section>    
+
+
+<div class="w-full h-[80px] bg-[#f3f3f3] pl-[80px]">
+    <div>
+        <h1 class="text-[#212121] text-[18px] pt-[35px]">Featured brands</h1>
+    </div>
+</div>
+<section  class="w-full  bg-white shadow-[0_0_7px_0_rgba(0,0,0,.28)] h-[212px]">
+    <div class="slider-container6">
+        <div class="slider-item6">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-10%2F1698651191_Chyawanprash.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+        <div class="slider-item6">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-10%2F1698651197_Herbal.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+        <div class="slider-item6">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-10%2F1698651239_Nebuliser+%26+Vaporiser.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+        <div class="slider-item6">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-10%2F1698651261_Green+%26+Herbal+Tea-2.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+        <div class="slider-item6">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-10%2F1698652524_Skin+care.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+        <div class="slider-item6">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-10%2F1698652536_Hot+Water+Bottle.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+        <div class="slider-item6">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-10%2F1698652542_Lip+Balm.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+        <div class="slider-item6">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-10%2F1698652549_Omega+%26+Fish+Oil.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+        <div class="slider-item6">
+            <a href="">
+                <img src="https://onemg.gumlet.io/diagnostics%2F2023-10%2F1698652556_Supports+and+Braces.png?format=auto" width="120" height="120" alt="">
+            </a>
+        </div>
+
+    </div>
+
+        <div class="w-full flex flex-row">
+        <button id="customPrev6" onclick="showPreviousCustom6()">❮</button>
+        <button id="customNext6" onclick="showNextCustom6()">❯</button>
+    </div>
+
+</section>
+
+
+<div class="w-full h-[40px] bg-[#f3f3f3] pl-[80px] flex flex-row justify-between">
+</div>
+<section class="w full h-[500px] flex flex-col">
+    <div class="flex flex-col  w-[98.5%]  ml-5 ">
+        <h1 class="text-[18px] font-[600] my-5">Stay Healthy with Tata 1mg: Your Favourite Online Pharmacy and Healthcare Platform</h1>
+        <h3 class="text-[15px] font-[600]">We bring care to Health</h3>
+        <p class="opacity-70 my-3 text-[16px]">Tata 1mg is India's leading digital healthcare platform. From doctor consultations on chat to online pharmacy and lab tests at home: we have it all covered for you. Having  delivered over 25 million orders in 1000+ cities till date, we are on a mission to bring "care" to "health" to give you a flawless healthcare experience.</p>
+        <h3 class="text-[15px] font-[600]">Tata 1mg: Your Favourite Online Pharmacy!</h3>    
+        <p class="opacity-70 mt-3 text-[16px]">Tata 1mg is India's leading online chemist with over 2 lakh medicines available at the best prices. We are your one-stop destination for other healthcare products as well, such as over the counter pharmaceuticals, healthcare devices and homeopathy and ayurveda medicines.
+
+        </p>
+        <p class="opacity-70 my-2 text-[16px]">With Tata 1mg, you can buy medicines online and get them delivered at your doorstep anywhere in India! But, is ordering medicines online a difficult process? Not at all! Simply search for the products you want to buy, add to cart and checkout. Now all you need to do is sit back as we get your order delivered to you.</p>
+        <p class="opacity-70 my-2 text-[16px]">In case you need assistance, just give us a call and we will help you complete your order.</p>
+        <p class="opacity-70 my-2 text-[16px]">And there is more! At Tata 1mg, you can buy health products and medicines online at best discounts.</p>
+        <p class="opacity-70 my-2 text-[16px]">Now, isn't that easy? Why go all the way to the medicine store and wait in line, when you have Tata 1mg Pharmacy at your service.</p>
+        <h3 class="text-[16px] font-[600]">The Feathers in Our Cap</h3>
+        <p class="opacity-70 my-2 text-[16px]">At Tata 1mg, our goal is to make healthcare understandable, accessible and affordable in India. We set out on our journey in 2015, and have come a long way since then. Along the way, we have been conferred with prestigious titles like <b> BML Munjal Award for 'Business Excellence through Learning and Development', Best Online Pharmacy in India Award </b> and <b> Top 50 venture in The Smart CEO-Startup50 India.</b> We have been selected as the only company from across the globe for <b>
+             SD#3 "Health & Well Being for all" by Unreasonable group, US State Department.</b> In 2019 alone we received three awards including the <b> BMW Simply Unstoppable Award.</b></p>
+        
+        <h3 class="text-[15px] font-[600]">The Service We Offer</h3>
+        <p class="opacity-70 my-2 text-[16px]">Tata 1mg is India's leading digital healthcare platform, where you can buy medicines online with discount. Buy medicine online in Delhi, Mumbai, Bangalore, Hyderabad, Pune, Gurgaon, Noida, Kolkata, Chennai, Ahmedabad, Lucknow and around a 1000 more cities. Besides delivering your online medicine order at your doorstep, we provide accurate, authoritative & trustworthy information on medicines and help people use their medicines effectively and safely.</p>
+        <p class="opacity-70 my-2 text-[16px]">We also facilitate lab tests at home. You can avail over 2,000 tests and get tested by 120+ top and verified labs at the best prices. Need to consult a doctor? On our platform, you can talk to over 20 kinds of specialists in just a few clicks.</p>
+
+        <p class="opacity-70 my-2 text-[16px]">Customer centricity is the core of our values. Our team of highly trained and experienced doctors, phlebotomists and pharmacists looks into each order to give you a fulfilling experience.</p>
+        <p class="opacity-70 my-2 text-[16px]">We’ve made healthcare accessible to millions by giving them quality care at affordable prices. Customer centricity is the core of our values. Our team of highly trained and experienced doctors, phlebotomists and pharmacists looks into each order to give you a fulfilling experience.</p>
+        <p class="opacity-70 my-2 text-[16px]">Visit our online medical store now, and avail online medicine purchase at a discount.</p>
+        <p class="opacity-70 my-2 text-[16px]">Stay Healthy!</p>
+    </div>
+    <div class="w-full h-[1px] border border-solid border-black opacity-5"></div>
+ <section class="w-full  h-[210px]  shadow-md  bg-white" >
+    <div>
+        <div class="text-center mt-6">
+            <h1 class="text-[25px] ">INDIA'S LARGEST HEALTHCARE PLATFORM</h1>
+        </div>
+        <div class="flex flex-row justify-evenly  first-letter mt-8 mb-2">
+            <div>
+                <h1 class="text-[30px] font-[700] text-center">260m+</h1>
+                <p class="text-[18px] text-center">Visitors</p>
+            </div>
+            <div>
+                <h1 class="text-[30px] font-[700] text-center">31m+</h1>
+                <p class="text-[18px] text-center">Orders Delivered</p>
+            </div>
+            <div>
+                <h1 class="text-[30px] font-[700]">1800+</h1>
+                <p class="text-[18px] text-center">Cities</p>
+            </div>
+        </div>
+    </div>
+    
+   </section>
+
+        
+ <div class="flex flex-row justify-center space-x-3 mt-10 mb-10">
+    <div>
+        <p class="text-[18px] font-[600] mt-1">Get the link to download App</p>
+    </div>
+    <div>
+        <input type="text" placeholder="Enter Phone Number" class="w-[320px] ml-1 px-6 h-9 bg-slate-100" >    
+    </div>
+    <div>
+        <button class=" relative rounded-md w-[80px] bg-[#ff6f61] h-10 pl-[4px] pr-[4px] ml-2  text-white font-bold text-[14px]  items-center
+        hover:cursor-pointer   mr-10 ">See All</button>
+    </div>
+ </div>
+
+ <div class="w-full h-[250px] ">
+    <div class="flex flex-row justify-around">
+        <div class="flex flex-col"> 
+            <h1 class="text-[18px] font-[500] mb-5">Know us</h1>
+            <ul class="text-[14px] opacity-70 space-y-1.5">
+                <li> 
+                    <P >About Us</P>
+                </li>
+                
+                <li>    <P>Contact Us</P></li>
+                <li><P>Press Coverage</P></li>
+                <li><P>Careers</P></li>
+                <li><P>Business Partnership</P></li>
+                <li><P>Become a Health</P>
+                <li><P>Partner</P></li>
+                <li><P>Corporate Governanace</P></li>
+            </ul>    
+            
+        </div>
+        <div>
+            <h1 class="text-[18px] font-[500] mb-5">Our Policies</h1>
+            <ul class="text-[14px] opacity-70 space-y-1.5">
+                <li> 
+                    <P >Privacy Policy</P>
+                </li>
+                
+                <li>    <P>Terms and Conditions</P></li>
+                <li><P>Editorial Policy</P></li>
+                <li><P>Return Policy</P></li>
+                <li><P>IP Policy</P></li>
+                <li><P>Grievance Redressal Policy</P></li>
+                <li><P>Fake Jobs and Fraud</P></li>
+                <li><p>Disclaimer</p></li>
+            </ul>  
+         </div>
+        <div>
+            <h1 class="text-[18px] font-[500] mb-5">Our Services</h1>
+            <ul class="text-[14px] opacity-70 space-y-1.5">
+                <li> 
+                    <P >Order medicines</P>
+                </li>
+                
+                <li>    <P>Book Lab Tests</P></li>
+                <li><P>Consult a Doctor</P></li>
+                <li><P>Ayurveda</P></li>
+                <li><P>Articles</P></li>
+                <li><P>Hindi Articles</P></li>
+                <li><P>Care pLan</P></li>
+                
+            </ul>  
+        </div>
+        <div>
+            <h1 class="text-[18px] font-[500] mb-5">Connect</h1>
+            <ul class="text-[14px]  space-y-1.5">
+                <li><p class="opacity-70">Social Links</p>
+                </li>
+                <li class="w-[29px] h-[29px] flex flex-row space-x-2 bg-white">
+                    <img src="https://onemg.gumlet.io/vqpr5zx9ofpsyafjwwin.svg" alt="">
+                    <img src="https://onemg.gumlet.io/wwynoy59i3iakt8te5xl.svg" alt="">
+                    <img src="https://onemg.gumlet.io/cwrpdmlzckwzvv9e1gjv.svg" alt="">
+
+                    <img src="https://cdn-icons-png.flaticon.com/128/1384/1384060.png" alt="">
+                    <img src="https://onemg.gumlet.io/hqfglkzkfxaxaypniixn.svg" alt="">
+                    
+                </li>
+                <li class="w-[29px] h-[29px]">
+                    <img src="https://onemg.gumlet.io/ny7nk9wxxlcxpeh1jbgg.svg" alt="">
+                </li>
+                <li><p class="opacity-70">Want daily dose of health?</p></li>
+                <li><button class=" relative rounded-md w-[100px] bg-[#ff6f61] h-10 pl-[6px] pr-[6px] py-2 text-white font-bold text-[14px]  items-center
+                    hover:cursor-pointer  ">SIGN UP</button></li>
+            </ul>
+
+        </div>
+        <div>
+            <h1 class="text-[18px] font-[500] mb-5">Download App</h1>
+            <ul class="w-[136px] h-[47px] mt-[-10px]  ">
+                <li class="space-y-2">
+                    <img src="https://seeklogo.com/images/G/get-it-on-google-play-badge-logo-8CDE582776-seeklogo.com.png" alt="">
+                    <img class="w-[143px]" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+ </div>
+  
+ <div class="w-full h-[300px] flex flex-col justify-center items-center  shadow-[0_0_14px_0_rgpa(0,0,0,.28)] mt-[100px]">
+    <div class="flex flex-row justify-around w-[80%]  ">
+        <div class="flex flex-row ">
+            <div class="w-[300px] ">
+                <img class="w-[350px] h-[130px]" src="https://onemg.gumlet.io/secure-rebrand_x6f8yq.svg" alt="">
+            </div>
+            <div class="flex flex-col justify-center">
+                <div >
+                    <h1 class="text-[22px] font-bold">Reliable</h1>
+                </div>
+                <div class="text-[12px] opacity-70">
+                    <p>All products displayed on Tata 1mg are procured from verified and licensed pharmacies. All labs listed on the platform are accredited</p>
+                </div>
+            </div>
+        </div>
+                <div class="flex flex-row">
+            <div class="w-[300px] ">
+                <img class="w-[350px] h-[110px] mt-1" src="https://onemg.gumlet.io/reliable-rebrand_rcpof3.svg" alt="">
+            </div>
+            <div class="flex flex-col justify-center">
+                <div >
+                    <h1 class="text-[22px] font-bold">Secure</h1>
+                </div>
+                <div class="text-[12px] opacity-70">
+                    <p>Tata 1mg uses Secure Sockets Layer (SSL) 128-bit encryption and is Payment Card Industry Data Security Standard (PCI DSS) compliant</p>
+                </div>
+            </div>
+        </div>
+        
+                <div class="flex flex-row">
+            <div class="w-[300px] ">
+                <img class="w-[350px] h-[130px]" src="https://onemg.gumlet.io/affordable-rebrand_ivgidq.svg" alt="">
+            </div>
+            <div class="flex flex-col justify-center">
+                <div >
+                    <h1 class="text-[22px] font-bold">Affordable</h1>
+                </div>
+                <div class="text-[12px] opacity-70">
+                    <p>Find affordable medicine substitutes, save up to 50% on health products, up to 80% off on lab tests and free doctor consultations</p>
+                </div>
+            </div>
+        </div>
+ </div>
+
+ <div class="w-full mt-10 pt-3 pb-3 flex justify-center shadow-[0_0_7px_0_rgba(0,0,0,.14)]">
+    <div class="flex flex-col justify-center ">
+        <div class="flex flex-row w-[65%] justify-center items-center space-x-10">
+            <img class="w-[100px] " src="https://static.legitscript.com/seals/729605.png" alt="">
+            <img class="w-[100px]" src="https://onemg.gumlet.io/URS_ebgmxc.png" alt="">
+
+        </div>
+        <div class="mt-2 font-[600]" >
+            <h2>India's only LegitScript and ISO/ IEC 27001 certified online healthcare platform</h2>
+        </div>
+    </div>
+ </div> 
+<div class="w-full h-[30px]  shadow-[0_0_14px_0_rgpa(0,0,0,.28)] pl-[20px] p-3">
+    <p class="font-[600]">Know more about Tata 1mg</p>
+
+</div>
+<div class="w-full flex justify-center pt-5">
+    <div class="w-[65%]">
+        <div>
+            <p class="text-center text-[14px] opacity-70 ">© 2023 Tata 1mg. All rights reserved. All medicines are dispensed in compliance with the Drugs and Cosmetics Act, 1940 and Drugs and Cosmetics Rules, 1945. We do not process requests for Schedule X and habit forming drugs.</p>
+        </div>
+
+    </div>
+</div>
+
+</section>
+
+
+
+
+
+
+</body>
+</html>
+<script>
+    var counter = 1;
+    setInterval(function(){
+        document.getElementById('radio'+counter).checked = true;
+        counter++;
+        if(counter>10){
+            counter =1;
+        }
+    },5000);
+
+    let currentIndex = 0;
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + 13) % 13; // 12 is the total number of slides
+    updateSlider();
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % 13; // 12 is the total number of slides
+    updateSlider();
+}
+
+function updateSlider() {
+    const sliderContainer = document.querySelector('.slider-container');
+    const offset = currentIndex * sliderContainer.offsetWidth;
+    sliderContainer.scrollTo({ left: offset, behavior: 'smooth' });
+}
+
+let customIndex2 = 0;
+
+function showPreviousCustom() {
+  customIndex2 = (customIndex2 - 1 + 12) % 12; // 12 is the total number of slides
+  updateCustomSlider();
+}
+
+function showNextCustom() {
+  customIndex2 = (customIndex2 + 1) % 12; // 12 is the total number of slides
+  updateCustomSlider();
+}
+
+function updateCustomSlider() {
+  const customSliderContainer = document.querySelector('.slider-container2');
+  const offset = customIndex2 * customSliderContainer.offsetWidth;
+  customSliderContainer.scrollTo({ left: offset, behavior: 'smooth' });
+}
+
+let customIndex3 = 0;
+
+function showPreviousCustom3() {
+  customIndex3 = (customIndex3 - 1 + 9) % 9; // 12 is the total number of slides
+  updateCustomSlider3();
+}
+
+function showNextCustom3() {
+  customIndex3 = (customIndex3 + 1) % 9; // 12 is the total number of slides
+  updateCustomSlider3();
+}
+
+function updateCustomSlider3() {
+  const customSliderContainer = document.querySelector('.slider-container3');
+  const offset = customIndex3 * customSliderContainer.offsetWidth;
+  customSliderContainer.scrollTo({ left: offset, behavior: 'smooth' });
+}
+
+let customIndex4 = 0;
+
+function showPreviousCustom4() {
+  customIndex4 = (customIndex4 - 1 + 13) % 13; // 12 is the total number of slides
+  updateCustomSlider4();
+}
+
+function showNextCustom4() {
+  customIndex4 = (customIndex4 + 1) % 13; // 12 is the total number of slides
+  updateCustomSlider4();
+}
+
+function updateCustomSlider4() {
+  const customSliderContainer = document.querySelector('.slider-container4');
+  const offset = customIndex4 * customSliderContainer.offsetWidth;
+  customSliderContainer.scrollTo({ left: offset, behavior: 'smooth' });
+}
+
+let customIndex5 = 0;
+
+function showPreviousCustom5() {
+  customIndex5 = (customIndex5 - 1 + 10) % 10; // 12 is the total number of slides
+  updateCustomSlider5();
+}
+
+function showNextCustom5() {
+  customIndex5 = (customIndex5 + 1) % 10; // 12 is the total number of slides
+  updateCustomSlider5();
+}
+
+function updateCustomSlider5() {
+  const customSliderContainer = document.querySelector('.slider-container5');
+  const offset = customIndex5 * customSliderContainer.offsetWidth;
+  customSliderContainer.scrollTo({ left: offset, behavior: 'smooth' });
+}
+
+let customIndex6 = 0;
+
+function showPreviousCustom6() {
+  customIndex6 = (customIndex6 - 1 + 10) % 10; // 12 is the total number of slides
+  updateCustomSlider6();
+}
+
+function showNextCustom6() {
+  customIndex6 = (customIndex6 + 1) % 10; // 12 is the total number of slides
+  updateCustomSlider6();
+}
+
+function updateCustomSlider6() {
+  const customSliderContainer = document.querySelector('.slider-container6');
+  const offset = customIndex6 * customSliderContainer.offsetWidth;
+  customSliderContainer.scrollTo({ left: offset, behavior: 'smooth' });
+}
+
+// sign-up
+
+    
+
+document.querySelector("#show-sign-up").addEventListener("click",function(){
+        document.querySelector(".popup").classList.add("active");
+    });
+
+    document.querySelector(".popup .close-btn").addEventListener("click",function(){
+        document.querySelector(".popup").classList.remove("active");
+    });
+
+let form = document.getElementById("form");
+let email = document.getElementById("email");
+let password=document.getElementById("password")   
+
+form.addEventListener("submit", function(event){
+    event.preventDefault();
+    let userDetails = {
+        email:email.value,
+        password: password.value,
+    };
+    localStorage.setItem("userDetails",JSON.stringify(userDetails))
+})
+// sign-up end
+// login js
+document.querySelector("#show-login").addEventListener("click",function(){
+        document.querySelector(".popup2").classList.add("active");
+    });
+
+    document.querySelector(".popup2 .close-btn2").addEventListener("click",function(){
+        document.querySelector(".popup2").classList.remove("active");
+    });
+    let form2 = document.getElementById("form2");
+    let email2 = document.getElementById("email2");
+    let password2=document.getElementById("password2");   
+    form2.addEventListener("submit", function(event){
+    event.preventDefault();
+    let   userDetails ={
+        email2:email2.value,
+        password2: password2.value,
+    };
+    let savedDetails = JSON.parse(localStorage.getItem("userdetails")) || {};
+    if(userDetails.email ==savedDetails.email && userDetails.password==savedDetails.password2){
+        alert("Login Success!");
+    }
+    else{
+        alert("Please Sign-up first")
+    }
+    
+})    
+</script>
